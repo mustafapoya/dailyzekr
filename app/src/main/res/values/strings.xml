@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Daily Zekr</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Ellia Soft</string>
+    <string name="nav_header_subtitle">elliasoft@gmail.com</string>
+    <string name="nav_header_desc">Daily Zekr</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_setting">Setting</string>
+    <string name="menu_about">About</string>
+
+    <string name="today_zekr">Today Zekr</string>
+    <string name="today_zekr_img">Today Zekr</string>
+    <string name="set_today_zekr">Set Today Zekr Image</string>
+
+</resources>
