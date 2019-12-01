@@ -23,13 +23,15 @@ public class AboutFragment extends Fragment {
         aboutViewModel =
                 ViewModelProviders.of(this).get(AboutViewModel.class);
         View root = inflater.inflate(R.layout.fragment_about, container, false);
-        final TextView textView = root.findViewById(R.id.text_about);
+        TextView txtElliaAbout = root.findViewById(R.id.txtElliaDetails);
+        txtElliaAbout.setText("Ellia Software Solution Company is a New Startup one started in 2019");
+        /*final TextView textView = root.findViewById(R.id.text_about);
         aboutViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
             }
-        });
+        });*/
         return root;
     }
 }

@@ -10,13 +10,14 @@
     <ImageView
         android:id="@+id/imgDevTimeLogo"
         android:layout_width="0dp"
-        android:layout_height="200dp"
+        android:layout_height="160dp"
         android:contentDescription="@string/app_name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/daily_zekr_icon" />
+        app:layout_constraintVertical_bias="0.32999998"
+        app:srcCompat="@drawable/ellia_logo" />
 
     <ProgressBar
         android:id="@+id/splashProgressBar"
@@ -26,7 +27,7 @@
         android:layout_marginTop="20dp"
         android:indeterminate="true"
         android:progressTint="#000000"
-        android:indeterminateTint="#FF0000"
+        android:indeterminateTint="#FE9003"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgDevTimeLogo" />

@@ -12,14 +12,15 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
+        android:id="@+id/nav_setting"
+        android:name="com.ellia.dailyzekr.ui.setting.SettingFragment"
+        android:label="@string/menu_setting"
+        tools:layout="@layout/fragment_setting" />
+
+    <fragment
         android:id="@+id/nav_about"
         android:name="com.ellia.dailyzekr.ui.about.AboutFragment"
         android:label="@string/menu_about"
         tools:layout="@layout/fragment_about" />
 
-    <fragment
-        android:id="@+id/nav_setting"
-        android:name="com.ellia.dailyzekr.ui.setting.SettingFragment"
-        android:label="@string/menu_setting"
-        tools:layout="@layout/fragment_setting" />
 </navigation>

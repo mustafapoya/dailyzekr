@@ -15,14 +15,12 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:adjustViewBounds="true"
         android:contentDescription="@string/nav_header_desc"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:visibility="visible"
-        tools:srcCompat="@drawable/daily_zekr_icon"
-        tools:visibility="visible" />
+        android:paddingLeft="-5dp"
+        android:src="@drawable/ellia_logo" />
 
     <TextView
         android:layout_width="match_parent"

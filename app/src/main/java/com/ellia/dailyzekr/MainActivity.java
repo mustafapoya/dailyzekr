@@ -1,6 +1,9 @@
 package com.ellia.dailyzekr;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.os.Build;
 import android.os.Bundle;
 
 import com.ellia.dailyzekr.core.DailyBroadcastReceiverService;
@@ -22,6 +25,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -47,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
+
         Intent zekrService = new Intent(this, DailyBroadcastReceiverService.class);
         startService(zekrService);
     }
@@ -57,4 +63,5 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
 }
