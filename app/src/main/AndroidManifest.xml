@@ -15,6 +15,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-9778979220370457~9773548477"/>
+
         <receiver android:name=".core.DailyZekrBroadcastReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.DATE_CHANGED"/>
