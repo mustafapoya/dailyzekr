@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.WindowManager;
 
 import com.ellia.dailyzekr.R;
@@ -66,6 +67,8 @@ public class DailyZekrHandler {
         WindowManager window = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
         window.getDefaultDisplay().getMetrics(metrics);
 
+        Log.d("DailyZekrBroadCst", "trying to change imge: " + todayImage);
+
         if(todayImage != DailyZekrHandler.getTodayImage(context)) {
             DailyZekrHandler.storeTodayImage(context);
 
@@ -78,6 +81,7 @@ public class DailyZekrHandler {
 
             try {
                 wallpaperManager.setBitmap(bitmap);
+                Log.d("DailyZekrBroadCst", "today_image: " + todayImage);
             } catch (IOException e) {
                 e.printStackTrace();
             }
