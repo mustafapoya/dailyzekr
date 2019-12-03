@@ -13,12 +13,15 @@ import com.ellia.dailyzekr.R;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class DailyZekrHandler {
 
-    public static String getTodayName() {
-        return new SimpleDateFormat("EEEE").format(new Date());
+    public static int getTodayName() {
+        Calendar calendar = Calendar.getInstance();
+        int day = calendar.get(Calendar.DAY_OF_WEEK);
+        return day;
     }
 
     public static int[] daysImages() {
@@ -27,24 +30,25 @@ public class DailyZekrHandler {
     }
 
     public static int nameOfTheWeek(){
-        String dayOfTheWeek = DailyZekrHandler.getTodayName();
+        int dayOfTheWeek = DailyZekrHandler.getTodayName();
+
         switch (dayOfTheWeek){
-            case "Saturday":
+            case Calendar.SATURDAY:
                 return R.drawable.a;
-            case "Sunday":
+            case Calendar.SUNDAY:
                  return R.drawable.b;
-            case "Monday":
+            case Calendar.MONDAY:
                 return R.drawable.c;
-            case "Tuesday":
+            case Calendar.TUESDAY:
                 return R.drawable.d;
-            case "Wednesday":
+            case Calendar.WEDNESDAY:
                 return R.drawable.e;
-            case "Thursday":
+            case Calendar.THURSDAY:
                 return R.drawable.f;
-            case "Friday":
+            case Calendar.FRIDAY:
                 return R.drawable.g;
             default:
-                return 0;
+                return -1;
         }
     }
 

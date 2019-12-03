@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
         Intent zekrService = new Intent(this, DailyBroadcastReceiverService.class);
         startService(zekrService);
+
     }
 
     @Override
