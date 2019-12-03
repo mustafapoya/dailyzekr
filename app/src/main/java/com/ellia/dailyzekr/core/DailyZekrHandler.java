@@ -64,6 +64,18 @@ public class DailyZekrHandler {
         return sharedPref.getInt("today_image", 0);
     }
 
+    public static int getDailyZekrServiceStatus(Context context) {
+        SharedPreferences sharedPref = context.getSharedPreferences("app_config", context.MODE_PRIVATE);
+        return sharedPref.getInt("daily_zekr_image_service", DailyZekrImageServiceStatus.ON.value);
+    }
+
+    public static void storeDailyZekrServiceStatus(Context context, DailyZekrImageServiceStatus status) {
+        SharedPreferences sharedPref = context.getSharedPreferences("app_config", context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt("daily_zekr_image_service", status.value);
+        editor.commit();
+    }
+
     public static void setTodayImage(Context context) {
         int todayImage = DailyZekrHandler.nameOfTheWeek();
 
@@ -71,7 +83,7 @@ public class DailyZekrHandler {
         WindowManager window = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
         window.getDefaultDisplay().getMetrics(metrics);
 
-        Log.d("DailyZekrBroadCst", "trying to change imge: " + todayImage);
+        Log.d("DailyZekrBroadCast", "trying to change imge: " + todayImage);
 
         if(todayImage != DailyZekrHandler.getTodayImage(context)) {
             DailyZekrHandler.storeTodayImage(context);
@@ -85,7 +97,7 @@ public class DailyZekrHandler {
 
             try {
                 wallpaperManager.setBitmap(bitmap);
-                Log.d("DailyZekrBroadCst", "today_image: " + todayImage);
+                Log.d("DailyZekrBroadCast", "today_image: " + todayImage);
             } catch (IOException e) {
                 e.printStackTrace();
             }

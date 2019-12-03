@@ -13,5 +13,5 @@
     <string name="today_zekr">Today Zekr</string>
     <string name="today_zekr_img">Today Zekr</string>
     <string name="set_today_zekr">Set Today Zekr Image</string>
-
+    <string name="toggle_image_service">Enable Daily Zekr Image Service</string>
 </resources>
