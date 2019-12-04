@@ -38,6 +38,8 @@ public class DailyBroadcastReceiverService extends Service {
         /*filter.addAction(Intent.ACTION_TIME_TICK);
         filter.addAction(Intent.ACTION_TIME_CHANGED);*/
 
+        filter.addAction(Intent.ACTION_TIME_CHANGED);
+        filter.addAction(Intent.ACTION_TIME_TICK);
         filter.addAction(Intent.ACTION_DATE_CHANGED);
         registerReceiver(dailyZekrBr, filter);
     }
