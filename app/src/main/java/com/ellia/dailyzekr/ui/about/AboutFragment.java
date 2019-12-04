@@ -39,11 +39,12 @@ public class AboutFragment extends Fragment {
 
         simulateDayNight(/* DAY */ 0);
         Element adsElement = new Element();
+
         adsElement.setTitle("Advertise with us");
 
         View aboutPage = new AboutPage(root.getContext())
                 .isRTL(false)
-                .setImage(R.drawable.ellia_logo)
+                .setImage(R.drawable.ellia_banner)
                 .addItem(new Element().setTitle("Version 6.2"))
                 .addItem(adsElement)
                 .addGroup("Connect with us")
@@ -60,7 +61,9 @@ public class AboutFragment extends Fragment {
 //        mAdView = root.findViewById(R.id.aboutAdView);
 //        AdRequest adRequest = new AdRequest.Builder().build();
 //        mAdView.loadAd(adRequest);
-        getActivity().setContentView(aboutPage);
+//        getActivity().setContentView(aboutPage);
+        root = aboutPage;
+        
 
         /*final TextView textView = root.findViewById(R.id.text_about);
         aboutViewModel.getText().observe(this, new Observer<String>() {
