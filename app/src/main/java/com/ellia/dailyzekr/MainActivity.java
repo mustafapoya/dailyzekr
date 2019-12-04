@@ -7,12 +7,15 @@ import android.os.Build;
 import android.os.Bundle;
 
 import com.ellia.dailyzekr.core.DailyBroadcastReceiverService;
+import com.ellia.dailyzekr.core.DailyZekrHandler;
+import com.ellia.dailyzekr.core.DailyZekrImageServiceStatus;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import android.util.Log;
 import android.view.View;
 
 import androidx.navigation.NavController;
@@ -62,9 +65,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Intent zekrService = new Intent(this, DailyBroadcastReceiverService.class);
-        startService(zekrService);
-
+//        Intent zekrService = new Intent(this, DailyBroadcastReceiverService.class);
+        if(DailyZekrHandler.getDailyZekrServiceStatus(this) == DailyZekrImageServiceStatus.ON.getValue()) {
+//            startService(zekrService);
+            DailyZekrHandler.startService(this);
+            Log.d("MainActivityService", "service_started");
+        } else {
+            DailyZekrHandler.stopService(this);
+            Log.d("MainActivityService", "service_stopped");
+        }
     }
 
     @Override

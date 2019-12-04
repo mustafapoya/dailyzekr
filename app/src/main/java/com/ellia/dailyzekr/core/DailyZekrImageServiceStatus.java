@@ -2,7 +2,7 @@ package com.ellia.dailyzekr.core;
 
 public enum DailyZekrImageServiceStatus {
     ON(1),
-    OFF(2);
+    OFF(0);
     int value;
     DailyZekrImageServiceStatus(int value) {
         this.value = value;

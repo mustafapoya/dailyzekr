@@ -14,4 +14,7 @@
     <string name="today_zekr_img">Today Zekr</string>
     <string name="set_today_zekr">Set Today Zekr Image</string>
     <string name="toggle_image_service">Enable Daily Zekr Image Service</string>
+    <string name="toggle_image_service_details">You can Enable or Disable the Background Image Changer Service on Your Phone Just by Changing the Above Option.</string>
+    <string name="back_img_service_started">Image Change Service Started</string>
+    <string name="back_img_service_stopped">Image Change Service Stopped</string>
 </resources>

@@ -2,6 +2,7 @@ package com.ellia.dailyzekr.core;
 
 import android.app.WallpaperManager;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -102,5 +103,15 @@ public class DailyZekrHandler {
                 e.printStackTrace();
             }
         }
+    }
+
+    public static void startService(Context context) {
+        Intent zekrService = new Intent(context, DailyBroadcastReceiverService.class);
+        context.startService(zekrService);
+    }
+
+    public static void stopService(Context context) {
+        Intent zekrService = new Intent(context, DailyBroadcastReceiverService.class);
+        context.stopService(zekrService);
     }
 }
