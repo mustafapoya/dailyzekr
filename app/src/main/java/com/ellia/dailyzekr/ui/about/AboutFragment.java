@@ -50,7 +50,7 @@ public class AboutFragment extends Fragment {
         layout.addView(aboutPage);
         return root;
     }
-
+    
     Element getCopyRightsElement() {
         Element copyRightsElement = new Element();
         final String copyrights = String.format(getString(R.string.copy_right), Calendar.getInstance().get(Calendar.YEAR));
