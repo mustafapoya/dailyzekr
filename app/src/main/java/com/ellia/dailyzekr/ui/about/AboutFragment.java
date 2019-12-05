@@ -7,22 +7,17 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import androidx.annotation.Nullable;
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatDelegate;
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
+import android.widget.LinearLayout;
 
 import com.ellia.dailyzekr.R;
-import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
 import java.util.Calendar;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProviders;
 import mehdi.sakout.aboutpage.AboutPage;
 import mehdi.sakout.aboutpage.Element;
 
@@ -36,32 +31,23 @@ public class AboutFragment extends Fragment {
         aboutViewModel =
                 ViewModelProviders.of(this).get(AboutViewModel.class);
         View root = inflater.inflate(R.layout.fragment_about, container, false);
-
+        LinearLayout layout = root.findViewById(R.id.linearLayoutAbout);
 
         simulateDayNight(/* DAY */ 0);
-        Element adsElement = new Element();
-
-        adsElement.setTitle("Advertise with us");
 
         View aboutPage = new AboutPage(root.getContext())
                 .isRTL(false)
-                .setImage(R.drawable.ellia_banner)
-                .addItem(new Element().setTitle("Version 1.0"))
-                .addItem(adsElement)
+                .setDescription("Ellia Software Solution Company")
+                .addItem(new Element().setTitle("Version 1.0").setIconDrawable(R.drawable.ic_menu_setting))
                 .addGroup("Connect With US")
-                .addEmail("elmehdi.sakout@gmail.com")
-                .addWebsite("http://medyo.github.io/")
-                .addFacebook("the.medy")
-                .addTwitter("medyo80")
-                .addYoutube("UCdPQtdWIsg7_pi4mrRu46vA")
-                .addPlayStore("com.ideashower.readitlater.pro")
-                .addInstagram("medyo80")
-                .addGitHub("medyo")
+                .addEmail("elliasoft10@gmail.com")
+                .addFacebook("elliasoft")
+                .addYoutube("UCzsLPS-vuKJ9ihmKjIoh9xg")
+                .addPlayStore("com.elliasoft.dailyzekr")
                 .addItem(getCopyRightsElement())
                 .create();
 
-        root = aboutPage;
-        /*getActivity().setContentView(aboutPage);*/
+        layout.addView(aboutPage);
         return root;
     }
 
