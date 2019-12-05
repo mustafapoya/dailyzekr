@@ -9,7 +9,7 @@
     <string name="menu_setting">Setting</string>
     <string name="menu_about">About</string>
     <string name="about_page_description" translatable="false">We are an innovative computer code development company that provides top-rated computer code Development Services because of our huge expertise, a team of masterful professionals, key business insights, and a fanatical operating method.</string>
-    <string name="copy_right">"Copyrights © "</string>
+    <string name="copy_right" translatable="false">Copyrights © %1$d</string>
     <string name="today_zekr">Today Zekr</string>
     <string name="today_zekr_img">Today Zekr</string>
     <string name="set_today_zekr">Set Today Zekr Image</string>
