@@ -9,19 +9,25 @@
     <RelativeLayout
         android:id="@+id/homeLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/btnSetTodayZekr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-android:textColor="#FFFFFF"
-            android:paddingBottom="15dp"
-            android:layout_marginBottom="6dp"
-android:padding="5dp"
             android:layout_alignParentBottom="true"
-            android:text="@string/set_today_zekr" />
+            android:layout_marginBottom="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/colorPrimary"
+            android:padding="5dp"
+            android:paddingBottom="15dp"
+            android:text="@string/set_today_zekr"
+            android:textColor="#FFFFFF" />
 
         <com.google.android.gms.ads.AdView
             android:id="@+id/homeAdView"
@@ -29,10 +35,6 @@ android:padding="5dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             app:adSize="BANNER"
-
             app:adUnitId="ca-app-pub-3940256099942544/6300978111" />
-
     </RelativeLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
