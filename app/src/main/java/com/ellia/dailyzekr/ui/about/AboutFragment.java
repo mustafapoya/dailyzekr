@@ -37,7 +37,7 @@ public class AboutFragment extends Fragment {
 
         View aboutPage = new AboutPage(root.getContext())
                 .isRTL(false)
-                .setDescription("Ellia Software Solution Company")
+                .setDescription(getString(R.string.about_page_description))
                 .addItem(new Element().setTitle("Version 1.0").setIconDrawable(R.drawable.ic_menu_setting))
                 .addGroup("Connect With US")
                 .addEmail("elliasoft10@gmail.com")
