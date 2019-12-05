@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import com.ellia.dailyzekr.R;
 import com.ellia.dailyzekr.core.DailyZekrHandler;
@@ -32,9 +33,8 @@ public class HomeFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
 
-
-        ImageView imgTodayZekr = root.findViewById(R.id.imgTodayZekr);
-        imgTodayZekr.setImageResource(DailyZekrHandler.nameOfTheWeek());
+        RelativeLayout relativeLayout= root.findViewById(R.id.homeLayout);
+        relativeLayout.setBackgroundResource(DailyZekrHandler.nameOfTheWeek());
         Log.d("ImgeViewImageToday", "image_id: " + DailyZekrHandler.nameOfTheWeek());
         int dayOfTheWeek = DailyZekrHandler.getTodayName();
         Log.d("ImgeViewImageToday", "today_name: " + dayOfTheWeek);

@@ -31,6 +31,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.widget.RelativeLayout;
 
 import java.util.Locale;
 
@@ -43,6 +44,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
+        RelativeLayout main = findViewById(R.id.homeLayout);
+        try {
+            main.setBackgroundResource(R.drawable.a);
+
+        }catch (NullPointerException e){
+            Log.d("MainActivity", "onCreate: e");
+        }
         setSupportActionBar(toolbar);
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
