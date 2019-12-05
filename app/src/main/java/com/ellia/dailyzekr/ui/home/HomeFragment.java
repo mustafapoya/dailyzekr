@@ -1,6 +1,8 @@
 package com.ellia.dailyzekr.ui.home;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,9 +13,8 @@ import com.ellia.dailyzekr.R;
 import com.ellia.dailyzekr.core.DailyZekrHandler;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
+import java.time.DayOfWeek;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -34,6 +35,9 @@ public class HomeFragment extends Fragment {
 
         ImageView imgTodayZekr = root.findViewById(R.id.imgTodayZekr);
         imgTodayZekr.setImageResource(DailyZekrHandler.nameOfTheWeek());
+        Log.d("ImgeViewImageToday", "image_id: " + DailyZekrHandler.nameOfTheWeek());
+        int dayOfTheWeek = DailyZekrHandler.getTodayName();
+        Log.d("ImgeViewImageToday", "today_name: " + dayOfTheWeek);
         Button btnSetTodayZekr = root.findViewById(R.id.btnSetTodayZekr);
 
         btnSetTodayZekr.setOnClickListener(new View.OnClickListener() {

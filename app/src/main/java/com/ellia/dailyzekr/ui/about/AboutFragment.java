@@ -29,6 +29,7 @@ import mehdi.sakout.aboutpage.Element;
 public class AboutFragment extends Fragment {
 
     private AboutViewModel aboutViewModel;
+    private AdView mAdView;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -39,14 +40,16 @@ public class AboutFragment extends Fragment {
 
         simulateDayNight(/* DAY */ 0);
         Element adsElement = new Element();
+
         adsElement.setTitle("Advertise with us");
 
         View aboutPage = new AboutPage(root.getContext())
                 .isRTL(false)
-                .setImage(R.drawable.ellia_logo)
-                .addItem(new Element().setTitle("Version 6.2"))
+                .setImage(R.drawable.ellia_banner)
+                .addItem(new Element().setTitle("Version 1.0"))
                 .addItem(adsElement)
-                .addGroup("Connect with us")
+
+                .addGroup("Connect With US")
                 .addEmail("elmehdi.sakout@gmail.com")
                 .addWebsite("http://medyo.github.io/")
                 .addFacebook("the.medy")
@@ -57,20 +60,12 @@ public class AboutFragment extends Fragment {
                 .addGitHub("medyo")
                 .addItem(getCopyRightsElement())
                 .create();
-//        mAdView = root.findViewById(R.id.aboutAdView);
-//        AdRequest adRequest = new AdRequest.Builder().build();
-//        mAdView.loadAd(adRequest);
-        getActivity().setContentView(aboutPage);
 
-        /*final TextView textView = root.findViewById(R.id.text_about);
-        aboutViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });*/
+        root = aboutPage;
+        /*getActivity().setContentView(aboutPage);*/
         return root;
     }
+
     Element getCopyRightsElement() {
         Element copyRightsElement = new Element();
         final String copyrights = String.format(getString(R.string.copy_right), Calendar.getInstance().get(Calendar.YEAR));
@@ -85,6 +80,7 @@ public class AboutFragment extends Fragment {
         });
         return copyRightsElement;
     }
+
     void simulateDayNight(int currentSetting) {
         final int DAY = 0;
         final int NIGHT = 1;

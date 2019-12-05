@@ -2,18 +2,11 @@ package com.ellia.dailyzekr;
 
 
 import android.content.Intent;
-import android.content.res.Configuration;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.MotionEvent;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.ellia.dailyzekr.MainActivity;
-import com.ellia.dailyzekr.R;
-
-import java.util.Locale;
 
 public class SplashActivity extends AppCompatActivity {
     boolean isActive = true;

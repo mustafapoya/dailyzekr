@@ -10,8 +10,14 @@
     <string name="menu_home">خانه</string>
     <string name="menu_setting">تنظیمات</string>
     <string name="menu_about">درباره</string>
+    <string name="about_page_description" translatable="false">ما یک شرکت توسعه دهنده نرم افزار پیشرو هستیم که به دلیل تجربه گسترده ما ، تیمی از متخصصان ماهر ، بینش های کلیدی در کسب و کار و یک فرآیند کاری اختصاصی ، خدمات توسعه نرم افزار دارای رتبه برتر را ارائه می دهیم.</string>
 
     <string name="today_zekr">ذکر امروز</string>
     <string name="today_zekr_img">عکس ذکر امروز</string>
     <string name="set_today_zekr">تنظیم ذکر امروز</string>
+    <string name="toggle_image_service">فعال کردن سرویس تبدیل ذکر</string>
+    <string name="toggle_image_service_details">شما میتوانید سرویس تبدیل عکس خودکار را با استفاده از گزینه بالا فعال و یا غیر فعال نمائید.</string>
+    <string name="back_img_service_started">سرویس تغییر عکس فعال شد</string>
+    <string name="back_img_service_stopped">سرویس تغییر عکس متوقف شد</string>
+    <string name="copy_right">"© "</string>
 </resources>

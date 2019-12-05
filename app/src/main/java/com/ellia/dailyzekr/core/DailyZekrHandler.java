@@ -2,6 +2,7 @@ package com.ellia.dailyzekr.core;
 
 import android.app.WallpaperManager;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -13,12 +14,15 @@ import com.ellia.dailyzekr.R;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class DailyZekrHandler {
 
-    public static String getTodayName() {
-        return new SimpleDateFormat("EEEE").format(new Date());
+    public static int getTodayName() {
+        Calendar calendar = Calendar.getInstance();
+        int day = calendar.get(Calendar.DAY_OF_WEEK);
+        return day;
     }
 
     public static int[] daysImages() {
@@ -27,24 +31,25 @@ public class DailyZekrHandler {
     }
 
     public static int nameOfTheWeek(){
-        String dayOfTheWeek = DailyZekrHandler.getTodayName();
+        int dayOfTheWeek = DailyZekrHandler.getTodayName();
+
         switch (dayOfTheWeek){
-            case "Saturday":
+            case Calendar.SATURDAY:
                 return R.drawable.a;
-            case "Sunday":
+            case Calendar.SUNDAY:
                  return R.drawable.b;
-            case "Monday":
+            case Calendar.MONDAY:
                 return R.drawable.c;
-            case "Tuesday":
+            case Calendar.TUESDAY:
                 return R.drawable.d;
-            case "Wednesday":
+            case Calendar.WEDNESDAY:
                 return R.drawable.e;
-            case "Thursday":
+            case Calendar.THURSDAY:
                 return R.drawable.f;
-            case "Friday":
+            case Calendar.FRIDAY:
                 return R.drawable.g;
             default:
-                return 0;
+                return -1;
         }
     }
 
@@ -60,6 +65,18 @@ public class DailyZekrHandler {
         return sharedPref.getInt("today_image", 0);
     }
 
+    public static int getDailyZekrServiceStatus(Context context) {
+        SharedPreferences sharedPref = context.getSharedPreferences("app_config", context.MODE_PRIVATE);
+        return sharedPref.getInt("daily_zekr_image_service", DailyZekrImageServiceStatus.ON.value);
+    }
+
+    public static void storeDailyZekrServiceStatus(Context context, DailyZekrImageServiceStatus status) {
+        SharedPreferences sharedPref = context.getSharedPreferences("app_config", context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt("daily_zekr_image_service", status.value);
+        editor.commit();
+    }
+
     public static void setTodayImage(Context context) {
         int todayImage = DailyZekrHandler.nameOfTheWeek();
 
@@ -67,7 +84,7 @@ public class DailyZekrHandler {
         WindowManager window = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
         window.getDefaultDisplay().getMetrics(metrics);
 
-        Log.d("DailyZekrBroadCst", "trying to change imge: " + todayImage);
+        Log.d("DailyZekrBroadCast", "trying to change imge: " + todayImage);
 
         if(todayImage != DailyZekrHandler.getTodayImage(context)) {
             DailyZekrHandler.storeTodayImage(context);
@@ -81,10 +98,20 @@ public class DailyZekrHandler {
 
             try {
                 wallpaperManager.setBitmap(bitmap);
-                Log.d("DailyZekrBroadCst", "today_image: " + todayImage);
+                Log.d("DailyZekrBroadCast", "today_image: " + todayImage);
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
+    }
+
+    public static void startService(Context context) {
+        Intent zekrService = new Intent(context, DailyBroadcastReceiverService.class);
+        context.startService(zekrService);
+    }
+
+    public static void stopService(Context context) {
+        Intent zekrService = new Intent(context, DailyBroadcastReceiverService.class);
+        context.stopService(zekrService);
     }
 }
