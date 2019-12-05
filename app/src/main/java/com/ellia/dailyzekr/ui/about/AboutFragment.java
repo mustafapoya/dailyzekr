@@ -37,7 +37,7 @@ public class AboutFragment extends Fragment {
 
         View aboutPage = new AboutPage(root.getContext())
                 .isRTL(false)
-                .setDescription("Ellia Software Solution Company")
+                .setDescription(getString(R.string.about_page_description))
                 .addItem(new Element().setTitle("Version 1.0").setIconDrawable(R.drawable.ic_menu_setting))
                 .addGroup("Connect With US")
                 .addEmail("elliasoft10@gmail.com")
@@ -50,7 +50,7 @@ public class AboutFragment extends Fragment {
         layout.addView(aboutPage);
         return root;
     }
-
+    
     Element getCopyRightsElement() {
         Element copyRightsElement = new Element();
         final String copyrights = String.format(getString(R.string.copy_right), Calendar.getInstance().get(Calendar.YEAR));
