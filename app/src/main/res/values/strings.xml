@@ -6,6 +6,7 @@
     <string name="nav_header_subtitle">elliasoft@gmail.com</string>
     <string name="nav_header_desc">Daily Zekr</string>
     <string name="menu_home">Home</string>
+    <string name="menu_zekr_counter">Zekr Counter</string>
     <string name="menu_setting">Setting</string>
     <string name="menu_about">About</string>
     <string name="about_page_description" translatable="false">We are an innovative computer code development company that provides top-rated computer code Development Services because of our huge expertise, a team of masterful professionals, key business insights, and a fanatical operating method.</string>
