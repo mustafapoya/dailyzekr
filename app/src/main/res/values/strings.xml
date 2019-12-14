@@ -17,4 +17,6 @@
     <string name="toggle_image_service_details">You can Enable or Disable the Background Image Changer Service on Your Phone Just by Changing the Above Option.</string>
     <string name="back_img_service_started">Image Change Service Started</string>
     <string name="back_img_service_stopped">Image Change Service Stopped</string>
+    <string name="count">COUNT</string>
+    <string name="reset">RESET</string>
 </resources>

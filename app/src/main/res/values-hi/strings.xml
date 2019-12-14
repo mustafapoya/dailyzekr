@@ -17,4 +17,6 @@
     <string name="toggle_image_service_details">आप उपरोक्त विकल्प को बदलकर अपने फोन पर पृष्ठभूमि छवि परिवर्तक सेवा को सक्षम या अक्षम कर सकते हैं।</string>
     <string name="back_img_service_started">इमेज चेंज सर्विस शुरू</string>
     <string name="back_img_service_stopped">छवि परिवर्तन सेवा बंद</string>
+    <string name="count">شمردن</string>
+    <string name="reset">از نو</string>
 </resources>

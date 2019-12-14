@@ -20,4 +20,6 @@
     <string name="toggle_image_service_details">شما میتوانید سرویس تبدیل عکس خودکار را با استفاده از گزینه بالا فعال و یا غیر فعال نمائید.</string>
     <string name="back_img_service_started">سرویس تغییر عکس فعال شد</string>
     <string name="back_img_service_stopped">سرویس تغییر عکس متوقف شد</string>
+    <string name="count">شمردن</string>
+    <string name="reset">از نو</string>
 </resources>
