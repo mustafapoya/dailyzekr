@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.WindowManager;
@@ -13,6 +15,7 @@ import android.view.WindowManager;
 import com.ellia.dailyzekr.R;
 
 import java.io.IOException;
+import java.net.NetworkInterface;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -53,6 +56,29 @@ public class DailyZekrHandler {
         }
     }
 
+    public static int zekrOfDay() {
+        int dayOfTheWeek = DailyZekrHandler.getTodayName();
+
+        switch (dayOfTheWeek){
+            case Calendar.SATURDAY:
+                return R.string.saturday;
+            case Calendar.SUNDAY:
+                return R.string.sunday;
+            case Calendar.MONDAY:
+                return R.string.monday;
+            case Calendar.TUESDAY:
+                return R.string.tuesday;
+            case Calendar.WEDNESDAY:
+                return R.string.wednesday;
+            case Calendar.THURSDAY:
+                return R.string.thursday;
+            case Calendar.FRIDAY:
+                return R.string.friday;
+            default:
+                return R.string.saturday;
+        }
+    }
+
     public static void storeTodayImage(Context context) {
         SharedPreferences sharedPref = context.getSharedPreferences("app_config", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
@@ -74,6 +100,18 @@ public class DailyZekrHandler {
         SharedPreferences sharedPref = context.getSharedPreferences("app_config", context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putInt("daily_zekr_image_service", status.value);
+        editor.commit();
+    }
+
+    public static int getZekrCounterNumber(Context context) {
+        SharedPreferences sharedPref = context.getSharedPreferences("app_config", context.MODE_PRIVATE);
+        return sharedPref.getInt("zekr_counter_number", 0);
+    }
+
+    public static void storeZekrCounterNumber(Context context, int number) {
+        SharedPreferences sharedPref = context.getSharedPreferences("app_config", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt("zekr_counter_number", number);
         editor.commit();
     }
 
@@ -114,4 +152,11 @@ public class DailyZekrHandler {
         Intent zekrService = new Intent(context, DailyBroadcastReceiverService.class);
         context.stopService(zekrService);
     }
+
+    public static boolean isNetworkAvailable(Context context) {
+        ConnectivityManager connectivityManager = (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+
 }

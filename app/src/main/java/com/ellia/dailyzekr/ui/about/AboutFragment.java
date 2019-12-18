@@ -43,7 +43,7 @@ public class AboutFragment extends Fragment {
                 .addEmail("elliasoft10@gmail.com")
                 .addFacebook("ellia.brothers.3")
                 .addYoutube("UCzsLPS-vuKJ9ihmKjIoh9xg")
-                .addPlayStore("com.elliasoft.dailyzekr")
+                .addPlayStore("com.ellia.dailyzekr")
                 .addItem(getCopyRightsElement())
                 .create();
 

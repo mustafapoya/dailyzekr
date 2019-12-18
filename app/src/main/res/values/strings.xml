@@ -19,4 +19,6 @@
     <string name="back_img_service_stopped">Image Change Service Stopped</string>
     <string name="count">COUNT</string>
     <string name="reset">RESET</string>
+    <string name="zekr_number" translatable="false">0000</string>
+
 </resources>
