@@ -51,6 +51,7 @@ public class TimePickerFragment extends DialogFragment implements TimePickerDial
         SharedPreferences.Editor editor = pref.edit();
         editor.putInt("hour", hourOfDay);
         editor.putInt("minute",minute);
+        editor.apply();
     }
 
 //    @Override

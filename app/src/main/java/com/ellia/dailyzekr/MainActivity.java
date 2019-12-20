@@ -4,12 +4,14 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Build;
 import android.os.Bundle;
 
 import com.ellia.dailyzekr.core.DailyZekrBroadcastReceiver;
 import com.ellia.dailyzekr.core.DailyZekrHandler;
 import com.ellia.dailyzekr.core.DailyZekrImageServiceStatus;
 import com.ellia.dailyzekr.alarm.manager.AlarmTrigger;
+import com.ellia.dailyzekr.handlers.QuotesManager;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
@@ -40,11 +42,10 @@ private AlarmTrigger alarmTrigger;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         Toolbar toolbar = findViewById(R.id.toolbar);
         context = this.getApplicationContext();
         alarmTrigger = new AlarmTrigger(context);
-        alarmTrigger.createNotificationChannel();
+
         RelativeLayout main = findViewById(R.id.homeLayout);
         try {
             main.setBackgroundResource(R.drawable.a);
@@ -74,15 +75,7 @@ private AlarmTrigger alarmTrigger;
             }
         });
 
-//        Intent zekrService = new Intent(this, DailyBroadcastReceiverService.class);
-        if (DailyZekrHandler.getDailyZekrServiceStatus(this) == DailyZekrImageServiceStatus.ON.getValue()) {
-//            startService(zekrService);
-            DailyZekrHandler.startService(this);
-            Log.d("MainActivityService", "service_started");
-        } else {
-            DailyZekrHandler.stopService(this);
-            Log.d("MainActivityService", "service_stopped");
-        }
+        alarmTrigger.createNotificationChannel();
     }
 
 

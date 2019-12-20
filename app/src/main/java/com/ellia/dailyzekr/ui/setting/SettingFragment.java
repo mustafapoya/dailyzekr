@@ -76,9 +76,11 @@ public class SettingFragment extends Fragment implements View.OnClickListener {
         changeTheTime.setOnClickListener(this);
         showTime = root.findViewById(R.id.showTheTime);
         SharedPreferences sharedPreferences = getContext().getSharedPreferences("MyPref",0);
-       int minute= sharedPreferences.getInt("minute",00);
-      int hour =   sharedPreferences.getInt("hour",01);
-        showTime.setText("The Background chnage time is"+ hour+" : "+ minute );
+
+       int minute= sharedPreferences.getInt("minute",01);
+      int hour =   sharedPreferences.getInt("hour",00);
+        Toast.makeText(root.getContext(), "The time is "+ hour+" , "+ minute, Toast.LENGTH_SHORT).show();
+      showTime.setText("The Background chnage time is"+ hour+" : "+ minute );
         switchServiceStatus = root.findViewById(R.id.switchImageService);
 
     }
