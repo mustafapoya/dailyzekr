@@ -18,4 +18,7 @@
     <string name="back_img_service_started">Image Change Service Started</string>
     <string name="back_img_service_stopped">Image Change Service Stopped</string>
     <string name="time_background_change">The time to change the background</string>
+    <string name="enable_or_disable_the_quotes_notification">Enable or Disable the quotes notification</string>
+    <string name="enable_disable_quotes_notification">Enable/Disable Quotes notification</string>
+    <string name="change_Time">Change</string>
 </resources>

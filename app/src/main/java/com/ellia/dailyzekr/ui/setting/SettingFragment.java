@@ -1,7 +1,6 @@
 package com.ellia.dailyzekr.ui.setting;
 
 import android.app.ActivityManager;
-import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -13,13 +12,13 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.ellia.dailyzekr.R;
 import com.ellia.dailyzekr.core.DailyBroadcastReceiverService;
 import com.ellia.dailyzekr.core.DailyZekrHandler;
 import com.ellia.dailyzekr.core.DailyZekrImageServiceStatus;
+import com.ellia.dailyzekr.handlers.SharePreferences;
 import com.ellia.dailyzekr.ui.alram.TimePickerFragment;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -36,6 +35,7 @@ public class SettingFragment extends Fragment implements View.OnClickListener {
     private TimePickerFragment timePickerFragment;
     private TextView showTime;
     private  Switch switchServiceStatus;
+    private Switch switchNotification;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              final ViewGroup container, Bundle savedInstanceState) {
@@ -48,6 +48,20 @@ public class SettingFragment extends Fragment implements View.OnClickListener {
         switchServiceStatus.setChecked(DailyZekrHandler.getDailyZekrServiceStatus(context) == DailyZekrImageServiceStatus.ON.getValue() ? true : false);
         Log.d("CheckService", "isRunning: " + isMyServiceRunning(DailyBroadcastReceiverService.class, context));
 
+        switchNotification.setChecked(SharePreferences.getSharedPreferenceObject(context).getNotificationStatus()==1?true: false);
+        switchNotification.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked == true) {
+                    SharePreferences.getSharedPreferenceObject(context).setNotificationStatus(1);
+                    Toast.makeText(context, "The Quotes notification is enabled", Toast.LENGTH_SHORT).show();
+                } else {
+                    SharePreferences.getSharedPreferenceObject(context).setNotificationStatus(0);
+
+                    Toast.makeText(context, "The Quotes notification id disabled", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
         switchServiceStatus.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -77,11 +91,12 @@ public class SettingFragment extends Fragment implements View.OnClickListener {
         showTime = root.findViewById(R.id.showTheTime);
         SharedPreferences sharedPreferences = getContext().getSharedPreferences("MyPref",0);
 
-       int minute= sharedPreferences.getInt("minute",01);
-      int hour =   sharedPreferences.getInt("hour",00);
+       int minute= SharePreferences.getSharedPreferenceObject(getContext()).getMinute();
+      int hour =   SharePreferences.getSharedPreferenceObject(getContext()).getHour();
         Toast.makeText(root.getContext(), "The time is "+ hour+" , "+ minute, Toast.LENGTH_SHORT).show();
       showTime.setText("The Background chnage time is"+ hour+" : "+ minute );
         switchServiceStatus = root.findViewById(R.id.switchImageService);
+        switchNotification = root.findViewById(R.id.swithDisableNotification);
 
     }
 public void changeTheTime(){

@@ -12,6 +12,7 @@ import com.ellia.dailyzekr.core.DailyZekrHandler;
 import com.ellia.dailyzekr.core.DailyZekrImageServiceStatus;
 import com.ellia.dailyzekr.alarm.manager.AlarmTrigger;
 import com.ellia.dailyzekr.handlers.QuotesManager;
+import com.ellia.dailyzekr.handlers.SharePreferences;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     private Context context;
 private AlarmTrigger alarmTrigger;
     private AppBarConfiguration mAppBarConfiguration;
+    private SharePreferences sharePreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

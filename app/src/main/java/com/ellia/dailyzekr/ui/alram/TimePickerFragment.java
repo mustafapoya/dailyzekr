@@ -14,6 +14,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
+import com.ellia.dailyzekr.handlers.SharePreferences;
+
 import java.util.Calendar;
 
 
@@ -46,12 +48,7 @@ public class TimePickerFragment extends DialogFragment implements TimePickerDial
 
     @Override
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-        Toast.makeText(getContext(),"The time is "+ hourOfDay+"  , "+ minute,Toast.LENGTH_SHORT).show();
-        SharedPreferences pref = getContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
-        SharedPreferences.Editor editor = pref.edit();
-        editor.putInt("hour", hourOfDay);
-        editor.putInt("minute",minute);
-        editor.apply();
+        SharePreferences.getSharedPreferenceObject(getContext()).setDatePrefs(hourOfDay, minute);
     }
 
 //    @Override

@@ -4,18 +4,42 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 public class SharePreferences {
-    private static SharedPreferences sharedPreferences;
-   private SharePreferences(){
-
+private static   SharePreferences sharedPreferences;
+    private  Context context;
+    SharedPreferences sharedPref;
+    private SharePreferences(Context context){
+       this.context = context;
+         sharedPref = context.getSharedPreferences("zekr_shared", context.MODE_PRIVATE);
     }
-    public static SharedPreferences getSharedPreferenceObject(Context context){
+    public static SharePreferences getSharedPreferenceObject(Context context){
         if (sharedPreferences == null) {
-            sharedPreferences = context.getSharedPreferences("MyPref", Context.MODE_PRIVATE);
+            sharedPreferences = new SharePreferences(context);
         }
         return sharedPreferences;
 
     }
-   public void addData(String key, Object value){
 
-   }
+    public void setNotificationStatus(int value){
+
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt("notification", value);
+        editor.commit();
+    }
+    public  int getNotificationStatus() {
+
+        return sharedPref.getInt("notification", 11);
+    }
+    public void setDatePrefs(int hours, int minute){
+
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt("hour", hours);
+        editor.putInt("minute",minute);
+        editor.apply();
+    }
+    public int getHour(){
+        return sharedPref.getInt("hour", 00);
+    }
+    public int getMinute(){
+        return  sharedPref.getInt("minute",01);
+    }
 }

@@ -9,6 +9,7 @@ import android.os.Build;
 import android.util.Log;
 
 
+import com.ellia.dailyzekr.handlers.SharePreferences;
 
 import java.util.Calendar;
 
@@ -32,14 +33,16 @@ public class AlarmTrigger {
             alarmIntent = PendingIntent.getBroadcast(context, 0, intent, 0);
 
              calendar = Calendar.getInstance();
-             calendar.set(Calendar.HOUR,11);
-             calendar.set(Calendar.MINUTE,58);
-             calendar.set(Calendar.AM_PM,Calendar.PM);
-            calendar.setTimeInMillis(calendar.getTimeInMillis());
+        if (SharePreferences.getSharedPreferenceObject(context).getHour() == 00) {
+            calendar.set(Calendar.HOUR, 11);
+            calendar.set(Calendar.MINUTE,58);
+        } else {
+            calendar.set(Calendar.HOUR, SharePreferences.getSharedPreferenceObject(context).getHour());
+            calendar.set(Calendar.MINUTE, SharePreferences.getSharedPreferenceObject(context).getMinute());
+        }
         Log.d(TAG, "createNotificationChannel: "+ calendar.getTimeInMillis());
 
-calendar.set(Calendar.AM_PM,Calendar.PM);
-            Log.d("AlarmTrigger", "createNotificationChannel: The alram is "+calendar.getTimeInMillis());
+            Log.d("AlarmTrigger", "createNotificationChannel: The alarm is "+calendar.getTimeInMillis());
             alarMgr.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),
                     1000 * 60 * 20, alarmIntent);
 
