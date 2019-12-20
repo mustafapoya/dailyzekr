@@ -12,6 +12,13 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
+        android:id="@+id/nav_zekr_counter"
+        android:name="com.ellia.dailyzekr.ui.zekrcounter.ZekrCounterFragment"
+        android:label="@string/menu_zekr_counter"
+        tools:layout="@layout/fragment_zekr_counter" />
+
+
+    <fragment
         android:id="@+id/nav_setting"
         android:name="com.ellia.dailyzekr.ui.setting.SettingFragment"
         android:label="@string/menu_setting"

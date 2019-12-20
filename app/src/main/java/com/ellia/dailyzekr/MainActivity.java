@@ -4,41 +4,28 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.os.Build;
 import android.os.Bundle;
-
+import android.util.Log;
+import android.widget.RelativeLayout;
 import com.ellia.dailyzekr.core.DailyZekrBroadcastReceiver;
-import com.ellia.dailyzekr.core.DailyZekrHandler;
-import com.ellia.dailyzekr.core.DailyZekrImageServiceStatus;
 import com.ellia.dailyzekr.alarm.manager.AlarmTrigger;
-import com.ellia.dailyzekr.handlers.QuotesManager;
-import com.ellia.dailyzekr.handlers.SharePreferences;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
-
-import android.util.Log;
-
+import com.google.android.material.navigation.NavigationView;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-
-import com.google.android.material.navigation.NavigationView;
-
-import androidx.drawerlayout.widget.DrawerLayout;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
-import android.widget.RelativeLayout;
 
 public class MainActivity extends AppCompatActivity {
     private BroadcastReceiver dailyZekrBr;
     private Context context;
 private AlarmTrigger alarmTrigger;
     private AppBarConfiguration mAppBarConfiguration;
-    private SharePreferences sharePreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +49,7 @@ private AlarmTrigger alarmTrigger;
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_setting,
+                R.id.nav_home, R.id.nav_zekr_counter, R.id.nav_setting,
                 R.id.nav_about)
                 .setDrawerLayout(drawer)
                 .build();

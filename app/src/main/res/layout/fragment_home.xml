@@ -23,7 +23,7 @@
             android:layout_marginBottom="50dp"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/primary_button_selector"
             android:padding="5dp"
             android:paddingBottom="15dp"
             android:text="@string/set_today_zekr"

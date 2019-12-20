@@ -16,7 +16,6 @@ private static   SharePreferences sharedPreferences;
             sharedPreferences = new SharePreferences(context);
         }
         return sharedPreferences;
-
     }
 
     public void setNotificationStatus(int value){

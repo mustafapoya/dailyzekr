@@ -6,10 +6,10 @@
     <string name="nav_header_subtitle">elliasoft@gmail.com</string>
     <string name="nav_header_desc">Daily Zekr</string>
     <string name="menu_home">Home</string>
+    <string name="menu_zekr_counter">Zekr Counter</string>
     <string name="menu_setting">Setting</string>
     <string name="menu_about">About</string>
     <string name="about_page_description" translatable="false">We are an innovative computer code development company that provides top-rated computer code Development Services because of our huge expertise, a team of masterful professionals, key business insights, and a fanatical operating method.</string>
-    <string name="copy_right" translatable="false">Copyrights © %1$d</string>
     <string name="today_zekr">Today Zekr</string>
     <string name="today_zekr_img">Today Zekr</string>
     <string name="set_today_zekr">Set Today Zekr Image</string>
@@ -21,4 +21,12 @@
     <string name="enable_or_disable_the_quotes_notification">Enable or Disable the quotes notification</string>
     <string name="enable_disable_quotes_notification">Enable/Disable Quotes notification</string>
     <string name="change_Time">Change</string>
+  <string name="count">COUNT</string>
+    <string name="reset">RESET</string>
+    <string name="zekr_number" translatable="false">0000</string>
+    <string name="reset_counter">Reset Counter</string>
+    <string name="reset_counter_message">Are you sure to Reset Counter?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
 </resources>

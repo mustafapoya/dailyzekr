@@ -1,21 +1,17 @@
 package com.ellia.dailyzekr.ui.home;
 
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.ellia.dailyzekr.R;
 import com.ellia.dailyzekr.core.DailyZekrHandler;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-
-import java.time.DayOfWeek;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;

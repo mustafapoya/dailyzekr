@@ -41,19 +41,19 @@ public class AboutFragment extends Fragment {
                 .addItem(new Element().setTitle("Version 1.0").setIconDrawable(R.drawable.ic_menu_setting))
                 .addGroup("Connect With US")
                 .addEmail("elliasoft10@gmail.com")
-                .addFacebook("elliasoft")
+                .addFacebook("ellia.brothers.3")
                 .addYoutube("UCzsLPS-vuKJ9ihmKjIoh9xg")
-                .addPlayStore("com.elliasoft.dailyzekr")
+                .addPlayStore("com.ellia.dailyzekr")
                 .addItem(getCopyRightsElement())
                 .create();
 
         layout.addView(aboutPage);
         return root;
     }
-    
+
     Element getCopyRightsElement() {
         Element copyRightsElement = new Element();
-        final String copyrights = String.format(getString(R.string.copy_right), Calendar.getInstance().get(Calendar.YEAR));
+        final String copyrights = "CopyRights ©" + Calendar.getInstance().get(Calendar.YEAR);
         copyRightsElement.setTitle(copyrights);
         copyRightsElement.setIconTint(mehdi.sakout.aboutpage.R.color.about_item_icon_color);
         copyRightsElement.setIconNightTint(android.R.color.white);
