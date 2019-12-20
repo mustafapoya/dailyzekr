@@ -1,2 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">दैनिक ज़ेकर</string>
+    <string name="navigation_drawer_open">नेविगेशन दराज खोलें</string>
+    <string name="navigation_drawer_close">नेविगेशन ड्रावर बंद करें</string>
+    <string name="nav_header_title">एलिया शीतल</string>
+    <string name="nav_header_subtitle">elliasoft@gmail.com</string>
+    <string name="nav_header_desc">दैनिक ज़ेकर</string>
+    <string name="about_page_description" translatable="false">हम एक अग्रणी सॉफ्टवेयर डेवलपमेंट कंपनी हैं जो हमारे विशाल अनुभव, कुशल पेशेवरों की एक टीम, प्रमुख व्यावसायिक अंतर्दृष्टि और समर्पित कार्य प्रक्रिया के कारण टॉप रेटेड सॉफ्टवेयर डेवलपमेंट सर्विसेज प्रदान करते हैं।.</string>
+    <string name="menu_home">निवास</string>
+    <string name="menu_zekr_counter">नंबर सूचीबद्ध</string>
+    <string name="menu_setting">सेटिंग</string>
+    <string name="menu_about">के बारे में</string>
+    <string name="today_zekr">आज का ज़ेकर</string>
+    <string name="today_zekr_img">आज का ज़ेकर</string>
+    <string name="set_today_zekr">आज की ज़िक्र इमेज सेट करेَ</string>
+    <string name="toggle_image_service">दैनिक Zekr छवि सेवा सक्षम करें</string>
+    <string name="toggle_image_service_details">आप उपरोक्त विकल्प को बदलकर अपने फोन पर पृष्ठभूमि छवि परिवर्तक सेवा को सक्षम या अक्षम कर सकते हैं।</string>
+    <string name="back_img_service_started">इमेज चेंज सर्विस शुरू</string>
+    <string name="back_img_service_stopped">छवि परिवर्तन सेवा बंद</string>
+    <string name="count">गिनती</string>
+    <string name="reset">रीसेट</string>
+    <string name="reset_counter">फिर से पटल को स्थापित करना</string>
+    <string name="reset_counter_message">क्या आप काउंटर रीसेट करना सुनिश्चित करते हैं?</string>
+    <string name="yes">हाँ</string>
+    <string name="no">नहीं</string>
+</resources>

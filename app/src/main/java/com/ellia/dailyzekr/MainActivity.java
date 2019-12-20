@@ -1,38 +1,23 @@
 package com.ellia.dailyzekr;
 
-import android.content.Context;
-import android.content.Intent;
-import android.content.res.Configuration;
-import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.RelativeLayout;
 
-import com.ellia.dailyzekr.core.DailyBroadcastReceiverService;
 import com.ellia.dailyzekr.core.DailyZekrHandler;
 import com.ellia.dailyzekr.core.DailyZekrImageServiceStatus;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.navigation.NavigationView;
 
-import android.util.Log;
-import android.view.View;
-
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-
-import com.google.android.material.navigation.NavigationView;
-
-import androidx.drawerlayout.widget.DrawerLayout;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
-import android.view.Menu;
-
-import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,6 +28,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
+        RelativeLayout main = findViewById(R.id.homeLayout);
+        try {
+            main.setBackgroundResource(R.drawable.a);
+
+        }catch (NullPointerException e){
+            Log.d("MainActivity", "onCreate: e");
+        }
         setSupportActionBar(toolbar);
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -50,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_setting,
+                R.id.nav_home, R.id.nav_zekr_counter, R.id.nav_setting,
                 R.id.nav_about)
                 .setDrawerLayout(drawer)
                 .build();

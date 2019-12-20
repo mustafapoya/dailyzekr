@@ -3,44 +3,38 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imgTodayZekr"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/today_zekr_img"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="w,1:1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/a"
-        tools:srcCompat="@drawable/a"
-        tools:visibility="visible" />
-
-    <Button
-        android:id="@+id/btnSetTodayZekr"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="55dp"
-        android:text="@string/set_today_zekr"
-        app:layout_constraintBottom_toBottomOf="@+id/imgTodayZekr"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/homeAdView"
+    <RelativeLayout
+        android:id="@+id/homeLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        app:adSize="BANNER"
-        app:adUnitId="ca-app-pub-9778979220370457/5019065183"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnSetTodayZekr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/primary_button_selector"
+            android:padding="5dp"
+            android:paddingBottom="15dp"
+            android:text="@string/set_today_zekr"
+            android:textColor="#FFFFFF" />
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/homeAdView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            app:adSize="BANNER"
+            app:adUnitId="ca-app-pub-9778979220370457/5019065183" />
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

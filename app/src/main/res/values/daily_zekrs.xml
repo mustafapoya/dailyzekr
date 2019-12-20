@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="saturday" translatable="false">یا رَبِّ الْعالَمِین</string>
+    <string name="sunday" translatable="false">یا ذَالجَلالِ وَ اْلاِکْرام</string>
+    <string name="monday" translatable="false">یا قاضیَ الحاجات</string>
+    <string name="tuesday" translatable="false">یا أَرْحَمَ الرَّاحِمِین</string>
+    <string name="wednesday" translatable="false">یا حَیُّ یا قَیّومُ</string>
+    <string name="thursday" translatable="false">لا إِلهَ إِلَّا اللَّهُ المَلِک الحقّ المُبین</string>
+    <string name="friday" translatable="false">الّلهُمَّ صَلِّ عَلَی مُحَمَّدٍ وَآلِ مُحَمَّدٍ و عجل فرجهم</string>
+</resources>
