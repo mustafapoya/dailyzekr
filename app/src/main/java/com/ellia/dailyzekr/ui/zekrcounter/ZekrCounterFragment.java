@@ -36,10 +36,9 @@ public class ZekrCounterFragment extends Fragment {
     private InterstitialAd mInterstitialAd;
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        setHasOptionsMenu(true);
+        /*setHasOptionsMenu(true);*/
         toolsViewModel =
                 ViewModelProviders.of(this).get(ZekrCounterViewModel.class);
-
         View root = inflater.inflate(R.layout.fragment_zekr_counter, container, false);
         context = root.getContext();
         countNumber = DailyZekrHandler.getZekrCounterNumber(context);
@@ -54,9 +53,10 @@ public class ZekrCounterFragment extends Fragment {
         final MediaPlayer mp = MediaPlayer.create(context, R.raw.button_click);
 
         final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
-        alertDialogBuilder.setTitle("Reset Counter");
-        alertDialogBuilder.setMessage("Are you sure to Reset Counter");
-        alertDialogBuilder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+        alertDialogBuilder.setIcon(R.drawable.daily_zekr_icon);
+        alertDialogBuilder.setTitle(R.string.reset_counter);
+        alertDialogBuilder.setMessage(R.string.reset_counter_message);
+        alertDialogBuilder.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 txtZekrNumber.setText(String.format("%04d", 0));
@@ -64,10 +64,9 @@ public class ZekrCounterFragment extends Fragment {
             }
         });
 
-        alertDialogBuilder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+        alertDialogBuilder.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-
             }
         });
 

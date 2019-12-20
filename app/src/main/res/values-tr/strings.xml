@@ -6,7 +6,6 @@
     <string name="nav_header_title">Ellia Soft</string>
     <string name="nav_header_subtitle">elliasoft@gmail.com</string>
     <string name="nav_header_desc">Gün söz</string>
-
     <string name="menu_home">Ev</string>
     <string name="menu_zekr_counter">sayı listelenen</string>
     <string name="menu_setting">Ayar</string>
@@ -18,4 +17,10 @@
     <string name="toggle_image_service_details">Yukarıdaki seçeneği kullanarak otomatik fotoğraf dönüştürme hizmetini etkinleştirebilir veya devre dışı bırakabilirsiniz.</string>
     <string name="back_img_service_started">Fotoğraf değiştirme servisi etkin</string>
     <string name="back_img_service_stopped">Fotoğraf düzenleme hizmeti durdu</string>
+    <string name="count">saymak</string>
+    <string name="reset">sıfırlamak</string>
+    <string name="reset_counter">Sayacı Sıfırla</string>
+    <string name="reset_counter_message">Sayacı Sıfırladığınızdan emin misiniz?</string>
+    <string name="yes">Evet</string>
+    <string name="no">yok hayır</string>
 </resources>

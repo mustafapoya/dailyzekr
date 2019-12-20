@@ -20,5 +20,8 @@
     <string name="count">COUNT</string>
     <string name="reset">RESET</string>
     <string name="zekr_number" translatable="false">0000</string>
-
+    <string name="reset_counter">Reset Counter</string>
+    <string name="reset_counter_message">Are you sure to Reset Counter?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 </resources>
