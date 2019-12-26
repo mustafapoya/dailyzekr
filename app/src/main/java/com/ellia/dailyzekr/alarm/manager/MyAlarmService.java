@@ -65,7 +65,6 @@ public class MyAlarmService extends BroadcastReceiver {
             notificationChannel.setLightColor(Color.CYAN);
             notificationChannel.enableVibration(true);
 
-            notificationChannel.setVibrationPattern(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400});
             assert mNotificationManager != null;
             mBuilder.setChannelId(NOTIFICATION_CHANNEL_ID);
             mBuilder.setSmallIcon(R.drawable.ellia_logo);
