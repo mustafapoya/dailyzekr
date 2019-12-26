@@ -18,11 +18,14 @@
     <string name="toggle_image_service_details">شما میتوانید سرویس تبدیل عکس خودکار را با استفاده از گزینه بالا فعال و یا غیر فعال نمائید.</string>
     <string name="back_img_service_started">سرویس تغییر عکس فعال شد</string>
     <string name="back_img_service_stopped">سرویس تغییر عکس متوقف شد</string>
-    
     <string name="count">شمردن</string>
     <string name="reset">از نو</string>
     <string name="reset_counter">شمارش از نو</string>
     <string name="reset_counter_message">آیا شما مطمئن هستید که شمارشگر از نو شروع شود؟</string>
     <string name="yes">بلی</string>
     <string name="no">خیر</string>
+    <string name="toggle_quote_notification">فعال/غیر فعال سازی اطلاعیه جملات</string>
+    <string name="toggle_quote_notification_details">با فعال یا غیر فعال کردن این گزینه شما میتوانید که جملات بزرگان را در زمان باز کردن برنامه یا تغییر عکس پس زمینه مشاهده نمائید.</string>
+    <string name="notification_enabled">اطلاعیه فعال شد</string>
+    <string name="notification_disabled">اطلاعیه غیر فعال شد</string>
 </resources>

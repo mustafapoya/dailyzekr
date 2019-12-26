@@ -49,10 +49,10 @@ public class SettingFragment extends Fragment {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked == true) {
                     SharePreferences.getSharedPreferenceObject(context).setNotificationStatus(1);
-                    Toast.makeText(context, "The Quotes notification is enabled", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, R.string.notification_enabled, Toast.LENGTH_SHORT).show();
                 } else {
                     SharePreferences.getSharedPreferenceObject(context).setNotificationStatus(0);
-                    Toast.makeText(context, "The Quotes notification id disabled", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, R.string.notification_disabled, Toast.LENGTH_SHORT).show();
                 }
             }
         });
