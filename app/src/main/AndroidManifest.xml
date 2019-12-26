@@ -13,10 +13,16 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <receiver
+            android:name=".alarm.manager.MyAlarmService"
+            android:enabled="true"
+            android:exported="true"></receiver>
+
+
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-9778979220370457~9773548477"/>
+            android:value="ca-app-pub-9778979220370457~9773548477" />
 
         <receiver android:name=".core.DailyZekrBroadcastReceiver" android:enabled="true" >
             <intent-filter>
@@ -28,21 +34,22 @@
             </intent-filter>
         </receiver>
 
-        <service android:name=".core.DailyBroadcastReceiverService"/>
+        <service android:name=".core.DailyBroadcastReceiverService" />
 
-        <activity android:name=".SplashActivity" android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
-
     </application>
 
 </manifest>

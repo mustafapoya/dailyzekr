@@ -24,4 +24,6 @@
     <string name="reset_counter_message">Are you sure to Reset Counter?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="enable_or_disable_the_quotes_notification">Enable or Disable the quotes notification</string>
+    <string name="enable_disable_quotes_notification">Enable/Disable Quotes notification</string>
 </resources>

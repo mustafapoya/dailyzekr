@@ -15,6 +15,7 @@ import com.ellia.dailyzekr.R;
 import com.ellia.dailyzekr.core.DailyBroadcastReceiverService;
 import com.ellia.dailyzekr.core.DailyZekrHandler;
 import com.ellia.dailyzekr.core.DailyZekrImageServiceStatus;
+import com.ellia.dailyzekr.handlers.SharePreferences;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
@@ -24,19 +25,37 @@ import androidx.lifecycle.ViewModelProviders;
 
 public class SettingFragment extends Fragment {
 
-    private SettingViewModel toolsViewModel;
+    private SettingViewModel settingViewModel;
     private AdView mAdView;
+    private Switch switchServiceStatus;
+    private Switch switchNotification;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             final ViewGroup container, Bundle savedInstanceState) {
-        toolsViewModel =
+    public View onCreateView(@NonNull LayoutInflater inflater, final ViewGroup container, Bundle savedInstanceState) {
+        settingViewModel =
                 ViewModelProviders.of(this).get(SettingViewModel.class);
         View root = inflater.inflate(R.layout.fragment_setting, container, false);
-        final Context context = root.getContext();
 
-        Switch switchServiceStatus = root.findViewById(R.id.switchImageService);
+        final Context context = root.getContext();
+        switchServiceStatus = root.findViewById(R.id.switchImageService);
+        switchNotification = root.findViewById(R.id.swithDisableNotification);
+
         switchServiceStatus.setChecked(DailyZekrHandler.getDailyZekrServiceStatus(context) == DailyZekrImageServiceStatus.ON.getValue() ? true : false);
         Log.d("CheckService", "isRunning: " + isMyServiceRunning(DailyBroadcastReceiverService.class, context));
+
+        switchNotification.setChecked(SharePreferences.getSharedPreferenceObject(context).getNotificationStatus()==1?true: false);
+
+        switchNotification.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked == true) {
+                    SharePreferences.getSharedPreferenceObject(context).setNotificationStatus(1);
+                    Toast.makeText(context, "The Quotes notification is enabled", Toast.LENGTH_SHORT).show();
+                } else {
+                    SharePreferences.getSharedPreferenceObject(context).setNotificationStatus(0);
+                    Toast.makeText(context, "The Quotes notification id disabled", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
         switchServiceStatus.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -71,5 +90,4 @@ public class SettingFragment extends Fragment {
         }
         return true;
     }
-
 }
