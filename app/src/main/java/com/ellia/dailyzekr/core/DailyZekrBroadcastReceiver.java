@@ -13,6 +13,4 @@ public class DailyZekrBroadcastReceiver extends BroadcastReceiver {
         Log.d("DailyZekrBroadcast", "onReceive:The broadcast is called ");
         DailyZekrHandler.setTodayImage(context);
     }
-
-
 }

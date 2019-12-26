@@ -33,8 +33,6 @@ public class DailyBroadcastReceiverService extends Service {
         dailyZekrBr = null;
     }
 
-
-
     private void registerDailyZekrReceiver() {
         context= this.getApplicationContext();
         Log.d("Register", "onStart: Now gonna register the broadcast receiver on Daily Boadcast receiver");

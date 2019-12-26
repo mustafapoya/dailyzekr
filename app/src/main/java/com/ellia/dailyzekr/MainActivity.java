@@ -36,7 +36,7 @@ import android.widget.RelativeLayout;
 public class MainActivity extends AppCompatActivity {
     private BroadcastReceiver dailyZekrBr;
     private Context context;
-private AlarmTrigger alarmTrigger;
+    private AlarmTrigger alarmTrigger;
     private AppBarConfiguration mAppBarConfiguration;
     private SharePreferences sharePreferences;
 
@@ -80,9 +80,6 @@ private AlarmTrigger alarmTrigger;
         alarmTrigger.createNotificationChannel();
     }
 
-
-
-
     @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -102,6 +99,6 @@ private AlarmTrigger alarmTrigger;
         filter.addAction("android.intent.action.DATE_CHANGED");
         filter.addAction("android.intent.action.TIMEZONE_CHANGED");
         context.registerReceiver(dailyZekrBr, filter);
-
     }
+
 }
