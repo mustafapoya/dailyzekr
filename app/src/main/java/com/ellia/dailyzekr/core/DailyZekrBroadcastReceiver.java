@@ -11,6 +11,6 @@ public class DailyZekrBroadcastReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         Log.d("DailyZekrBroadcast", "onReceive:The broadcast is called ");
-        DailyZekrHandler.setTodayImage(context);
+        DailyZekrHandler.setTodayImage(context, false);
     }
 }

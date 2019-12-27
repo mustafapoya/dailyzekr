@@ -31,7 +31,7 @@ public class MyAlarmService extends BroadcastReceiver {
         // TODO: This method is called when the BroadcastReceiver is receiving
         Log.d("MyAlarmService", "onReceive:is called ");
         createNotification(context);
-        DailyZekrHandler.setTodayImage(context);
+        DailyZekrHandler.setTodayImage(context, false);
         // an Intent broadcast.
     }
 

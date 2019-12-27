@@ -34,10 +34,11 @@ public class AlarmTrigger {
         calendar = Calendar.getInstance();
         calendar.set(Calendar.HOUR, 00);
         calendar.set(Calendar.MINUTE, 01);
+        calendar.set(Calendar.AM_PM, Calendar.PM);
 
         Log.d(TAG, "createNotificationChannel: "+ calendar.getTimeInMillis());
         Log.d("AlarmTrigger", "createNotificationChannel: The alarm is "+calendar.getTimeInMillis());
-        alarMgr.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),1000 * 60 * 20, alarmIntent);
+        alarMgr.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),1000 * 86400, alarmIntent);
     }
 
 }

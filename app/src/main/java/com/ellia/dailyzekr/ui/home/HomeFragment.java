@@ -41,7 +41,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Log.d("ButtonImage", "trying to change image");
-                DailyZekrHandler.setTodayImage(context);
+                DailyZekrHandler.setTodayImage(context, true);
             }
         });
 

@@ -115,7 +115,7 @@ public class DailyZekrHandler {
         editor.commit();
     }
 
-    public static void setTodayImage(Context context) {
+    public static void setTodayImage(Context context, boolean forceSet) {
         int todayImage = DailyZekrHandler.nameOfTheWeek();
 
         DisplayMetrics metrics = new DisplayMetrics();
@@ -124,7 +124,7 @@ public class DailyZekrHandler {
 
         Log.d("DailyZekrBroadCast", "trying to change imge: " + todayImage);
 
-        if(todayImage != DailyZekrHandler.getTodayImage(context)) {
+        if(todayImage != DailyZekrHandler.getTodayImage(context) || forceSet) {
             DailyZekrHandler.storeTodayImage(context);
 
             Bitmap tempbitMap = BitmapFactory.decodeResource(context.getResources(), todayImage);
