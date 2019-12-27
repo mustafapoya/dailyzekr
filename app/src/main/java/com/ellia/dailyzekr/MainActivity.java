@@ -7,22 +7,13 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.RelativeLayout;
-import com.ellia.dailyzekr.core.DailyZekrBroadcastReceiver;
-import android.os.Build;
-import android.os.Bundle;
-import android.util.Log;
-import android.widget.RelativeLayout;
 
-import com.ellia.dailyzekr.core.DailyZekrBroadcastReceiver;
-import com.ellia.dailyzekr.core.DailyZekrHandler;
-import com.ellia.dailyzekr.core.DailyZekrImageServiceStatus;
 import com.ellia.dailyzekr.alarm.manager.AlarmTrigger;
+import com.ellia.dailyzekr.core.DailyZekrBroadcastReceiver;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.material.navigation.NavigationView;
-
-import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -31,15 +22,6 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-
-import com.google.android.material.navigation.NavigationView;
-
-import androidx.drawerlayout.widget.DrawerLayout;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
-import android.widget.RelativeLayout;
 
 public class MainActivity extends AppCompatActivity {
     private BroadcastReceiver dailyZekrBr;
