@@ -33,18 +33,17 @@ public class DailyBroadcastReceiverService extends Service {
         dailyZekrBr = null;
     }
 
-
-
     private void registerDailyZekrReceiver() {
         context= this.getApplicationContext();
         Log.d("Register", "onStart: Now gonna register the broadcast receiver on Daily Boadcast receiver");
+        dailyZekrBr = new DailyZekrBroadcastReceiver();
+        
         IntentFilter filter = new IntentFilter(Intent.ACTION_DATE_CHANGED);
+
         filter.addAction(Intent.ACTION_TIMEZONE_CHANGED);
         filter.addAction(Intent.ACTION_TIME_TICK);
         filter.addAction(Intent.ACTION_TIME_CHANGED);
         filter.addAction(Intent.ACTION_DATE_CHANGED);
         registerReceiver(dailyZekrBr, filter);
-
-
     }
 }

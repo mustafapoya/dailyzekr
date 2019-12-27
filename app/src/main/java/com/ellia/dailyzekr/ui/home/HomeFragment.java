@@ -1,5 +1,6 @@
 package com.ellia.dailyzekr.ui.home;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -21,13 +22,13 @@ public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
     private AdView mAdView;
-
+    private Context context;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
-
+        context = root.getContext();
 
         RelativeLayout relativeLayout= root.findViewById(R.id.homeLayout);
         relativeLayout.setBackgroundResource(DailyZekrHandler.nameOfTheWeek());
@@ -39,7 +40,8 @@ public class HomeFragment extends Fragment {
         btnSetTodayZekr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DailyZekrHandler.setTodayImage(view.getContext());
+                Log.d("ButtonImage", "trying to change image");
+                DailyZekrHandler.setTodayImage(context, true);
             }
         });
 

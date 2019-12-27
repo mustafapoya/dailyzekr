@@ -28,10 +28,12 @@ public class QuotesManager {
     public QuotesManager(Context context){
         this.context= context;
     }
+
     public Quotes getQuotes(){
         quotes = new Quotes();
         JSONArray data = getJSonData();
-randomNum=getRandomNumber();
+        randomNum = getRandomNumber();
+
         try {
             JSONObject jsonObject = data.getJSONObject(randomNum);
             quotes.setAuthor(jsonObject.getString("author"));
@@ -43,13 +45,15 @@ randomNum=getRandomNumber();
 
         return quotes;
     }
+
     public int getRandomNumber(){
-       r  = new Random();
+        r  = new Random();
         int low = 1;
         int high = 102;
         int result = r.nextInt(high-low) + low;
         return result;
     }
+
     public JSONArray getJSonData() {
         JSONArray quotes= null;
         try {
@@ -58,8 +62,9 @@ randomNum=getRandomNumber();
         } catch (JSONException e) {
             e.printStackTrace();
         }
-return quotes;
+        return quotes;
     }
+
     public String loadJSONFromAsset() {
         String json = null;
         try {
@@ -75,5 +80,4 @@ return quotes;
         }
         return json;
     }
-
 }

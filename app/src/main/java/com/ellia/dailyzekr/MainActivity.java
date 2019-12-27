@@ -8,11 +8,22 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.RelativeLayout;
 import com.ellia.dailyzekr.core.DailyZekrBroadcastReceiver;
+import android.os.Build;
+import android.os.Bundle;
+import android.util.Log;
+import android.widget.RelativeLayout;
+
+import com.ellia.dailyzekr.core.DailyZekrBroadcastReceiver;
+import com.ellia.dailyzekr.core.DailyZekrHandler;
+import com.ellia.dailyzekr.core.DailyZekrImageServiceStatus;
 import com.ellia.dailyzekr.alarm.manager.AlarmTrigger;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.material.navigation.NavigationView;
+
+import android.util.Log;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -21,10 +32,19 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.google.android.material.navigation.NavigationView;
+
+import androidx.drawerlayout.widget.DrawerLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
+import android.widget.RelativeLayout;
+
 public class MainActivity extends AppCompatActivity {
     private BroadcastReceiver dailyZekrBr;
     private Context context;
-private AlarmTrigger alarmTrigger;
+    private AlarmTrigger alarmTrigger;
     private AppBarConfiguration mAppBarConfiguration;
 
     @Override
@@ -67,9 +87,6 @@ private AlarmTrigger alarmTrigger;
         alarmTrigger.createNotificationChannel();
     }
 
-
-
-
     @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -89,6 +106,6 @@ private AlarmTrigger alarmTrigger;
         filter.addAction("android.intent.action.DATE_CHANGED");
         filter.addAction("android.intent.action.TIMEZONE_CHANGED");
         context.registerReceiver(dailyZekrBr, filter);
-
     }
+
 }

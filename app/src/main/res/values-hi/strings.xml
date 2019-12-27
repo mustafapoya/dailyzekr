@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">दैनिक ज़ेकर</string>
     <string name="navigation_drawer_open">नेविगेशन दराज खोलें</string>
@@ -23,4 +24,8 @@
     <string name="reset_counter_message">क्या आप काउंटर रीसेट करना सुनिश्चित करते हैं?</string>
     <string name="yes">हाँ</string>
     <string name="no">नहीं</string>
+    <string name="toggle_quote_notification">सक्षम / अधिसूचना उद्धरण अक्षम करें</string>
+    <string name="toggle_quote_notification_details">जब अनुप्रयोग प्रारंभ या परिवर्तित पृष्ठभूमि छवि हो, तो आप उद्धरण अधिसूचना दिखाने के लिए सक्षम या अक्षम कर सकते हैं</string>
+    <string name="notification_enabled">अधिसूचना सक्षम है</string>
+    <string name="notification_disabled">अधिसूचना अक्षम</string>
 </resources>

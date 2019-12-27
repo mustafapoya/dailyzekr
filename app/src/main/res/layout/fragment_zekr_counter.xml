@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="#fff"
+    app:chainUseRtl="false"
     android:layout_height="match_parent">
 
     <TextView
@@ -14,7 +15,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="5dp"
         android:textColor="#000000"
-        android:fontFamily="@font/iran_sans_bold"
+        android:fontFamily="@font/iran_sans_family"
         android:text="@string/saturday"
         android:textAlignment="center"
         android:textSize="30sp"
@@ -24,6 +25,7 @@
 
     <ImageView
         android:id="@+id/imgZekrCounterHolder"
+        android:layoutDirection="ltr"
         android:layout_width="280dp"
         android:layout_height="350dp"
         android:layout_marginBottom="10dp"
@@ -35,6 +37,7 @@
 
     <TextView
         android:id="@+id/txtZekrNumber"
+        android:layoutDirection="ltr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="63dp"
@@ -50,6 +53,7 @@
 
     <Button
         android:id="@+id/btnReset"
+        android:layoutDirection="ltr"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="130dp"
@@ -62,6 +66,7 @@
 
     <Button
         android:id="@+id/btnZekrSound"
+        android:layoutDirection="ltr"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginEnd="170dp"
@@ -73,6 +78,7 @@
 
     <Button
         android:id="@+id/btnCountUp"
+        android:layoutDirection="ltr"
         android:layout_width="110dp"
         android:layout_height="110dp"
         android:layout_marginStart="10dp"
