@@ -25,14 +25,15 @@ public class MyAlarmService extends BroadcastReceiver {
     private NotificationManager mNotificationManager;
     private NotificationCompat.Builder mBuilder;
     public static final String NOTIFICATION_CHANNEL_ID = "10001";
+    private DailyZekrHandler dailyZekrHandler;
 
     @Override
     public void onReceive(Context context, Intent intent) {
         // TODO: This method is called when the BroadcastReceiver is receiving
         Log.d("MyAlarmService", "onReceive:is called ");
         createNotification(context);
-        DailyZekrHandler.setTodayImage(context, false);
-        // an Intent broadcast.
+        dailyZekrHandler= new DailyZekrHandler();
+        dailyZekrHandler.setTodayImage(context, false,false);
     }
 
     /**

@@ -23,6 +23,7 @@ public class HomeFragment extends Fragment {
     private HomeViewModel homeViewModel;
     private AdView mAdView;
     private Context context;
+    private  DailyZekrHandler dailyZekrHandler;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel =
@@ -33,7 +34,7 @@ public class HomeFragment extends Fragment {
         RelativeLayout relativeLayout= root.findViewById(R.id.homeLayout);
         relativeLayout.setBackgroundResource(DailyZekrHandler.nameOfTheWeek());
         Log.d("ImgeViewImageToday", "image_id: " + DailyZekrHandler.nameOfTheWeek());
-        int dayOfTheWeek = DailyZekrHandler.getTodayName();
+        final int dayOfTheWeek = DailyZekrHandler.getTodayName();
         Log.d("ImgeViewImageToday", "today_name: " + dayOfTheWeek);
         Button btnSetTodayZekr = root.findViewById(R.id.btnSetTodayZekr);
 
@@ -41,7 +42,8 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Log.d("ButtonImage", "trying to change image");
-                DailyZekrHandler.setTodayImage(context, true);
+                dailyZekrHandler =new DailyZekrHandler();
+                dailyZekrHandler.setTodayImage(context, true, true);
             }
         });
 

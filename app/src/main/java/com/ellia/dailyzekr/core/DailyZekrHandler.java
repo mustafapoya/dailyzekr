@@ -1,18 +1,27 @@
 package com.ellia.dailyzekr.core;
 
+import android.app.AlertDialog;
 import android.app.WallpaperManager;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Build;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.WindowManager;
+import android.widget.ListAdapter;
+import android.widget.Toast;
+
+import androidx.annotation.RequiresApi;
 
 import com.ellia.dailyzekr.R;
+import com.ellia.dailyzekr.handlers.ChangeImage;
+import com.ellia.dailyzekr.handlers.SharePreferences;
 
 import java.io.IOException;
 import java.net.NetworkInterface;
@@ -21,6 +30,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class DailyZekrHandler {
+    private ChangeImage changeImage;
 
     public static int getTodayName() {
         Calendar calendar = Calendar.getInstance();
@@ -29,18 +39,18 @@ public class DailyZekrHandler {
     }
 
     public static int[] daysImages() {
-        int [] images = {R.drawable.a, R.drawable.b, R.drawable.c, R.drawable.d, R.drawable.e, R.drawable.f, R.drawable.g};
+        int[] images = {R.drawable.a, R.drawable.b, R.drawable.c, R.drawable.d, R.drawable.e, R.drawable.f, R.drawable.g};
         return images;
     }
 
-    public static int nameOfTheWeek(){
+    public static int nameOfTheWeek() {
         int dayOfTheWeek = DailyZekrHandler.getTodayName();
 
-        switch (dayOfTheWeek){
+        switch (dayOfTheWeek) {
             case Calendar.SATURDAY:
                 return R.drawable.a;
             case Calendar.SUNDAY:
-                 return R.drawable.b;
+                return R.drawable.b;
             case Calendar.MONDAY:
                 return R.drawable.c;
             case Calendar.TUESDAY:
@@ -59,7 +69,7 @@ public class DailyZekrHandler {
     public static int zekrOfDay() {
         int dayOfTheWeek = DailyZekrHandler.getTodayName();
 
-        switch (dayOfTheWeek){
+        switch (dayOfTheWeek) {
             case Calendar.SATURDAY:
                 return R.string.saturday;
             case Calendar.SUNDAY:
@@ -115,33 +125,33 @@ public class DailyZekrHandler {
         editor.commit();
     }
 
-    public static void setTodayImage(Context context, boolean forceSet) {
-        int todayImage = DailyZekrHandler.nameOfTheWeek();
+    public void setTodayImage(final Context context, final boolean forceSet, boolean isButton) {
+        changeImage = new ChangeImage(context);
 
-        DisplayMetrics metrics = new DisplayMetrics();
-        WindowManager window = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-        window.getDefaultDisplay().getMetrics(metrics);
 
-        Log.d("DailyZekrBroadCast", "trying to change imge: " + todayImage);
+        if (isButton) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(context);
+            builder.setTitle("Set Wallpaper As ");
+            String[] options = {"Home Screen", "Lock Screen", "Home Screen & Lock Screen"};
+            builder.setItems(options, new DialogInterface.OnClickListener() {
+                @RequiresApi(api = Build.VERSION_CODES.N)
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Log.d("TAG", "onClick: which  " + which);
+                    SharePreferences.getSharedPreferenceObject(context).setZekrImage(which);
+                    changeImage.change(forceSet, which);
+                }
+            });
+            AlertDialog dialog = builder.create();
+            dialog.show();
 
-        if(todayImage != DailyZekrHandler.getTodayImage(context) || forceSet) {
-            DailyZekrHandler.storeTodayImage(context);
+        } else {
+            changeImage.change(forceSet, SharePreferences.getSharedPreferenceObject(context).getZekrImage());
 
-            Bitmap tempbitMap = BitmapFactory.decodeResource(context.getResources(), todayImage);
-            Bitmap bitmap = Bitmap.createScaledBitmap(tempbitMap, metrics.widthPixels, metrics.heightPixels, true);
-
-            WallpaperManager wallpaperManager = WallpaperManager.getInstance(context);
-            wallpaperManager.setWallpaperOffsetSteps(1, 1);
-            wallpaperManager.suggestDesiredDimensions(metrics.widthPixels, metrics.heightPixels);
-
-            try {
-                wallpaperManager.setBitmap(bitmap);
-                Log.d("DailyZekrBroadCast", "today_image: " + todayImage);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
         }
+
     }
+
 
     public static void startService(Context context) {
         Intent zekrService = new Intent(context, DailyBroadcastReceiverService.class);
@@ -154,7 +164,7 @@ public class DailyZekrHandler {
     }
 
     public static boolean isNetworkAvailable(Context context) {
-        ConnectivityManager connectivityManager = (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }

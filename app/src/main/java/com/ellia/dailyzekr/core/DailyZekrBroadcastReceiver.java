@@ -7,10 +7,12 @@ import android.util.Log;
 
 
 public class DailyZekrBroadcastReceiver extends BroadcastReceiver {
+    private  DailyZekrHandler dailyZekrHandler;
 
     @Override
     public void onReceive(Context context, Intent intent) {
         Log.d("DailyZekrBroadcast", "onReceive:The broadcast is called ");
-        DailyZekrHandler.setTodayImage(context, false);
+        dailyZekrHandler= new DailyZekrHandler();
+        dailyZekrHandler.setTodayImage(context, false, false);
     }
 }

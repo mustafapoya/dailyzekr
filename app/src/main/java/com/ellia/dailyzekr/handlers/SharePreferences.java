@@ -26,8 +26,16 @@ private static SharePreferences sharedPreferences;
         editor.commit();
     }
 
-    public  int getNotificationStatus() {
+    public int getNotificationStatus() {
         return sharedPref.getInt("notification", 1);
+    }
+    public void setZekrImage(int value){
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt("zekrImage", value);
+        editor.commit();
+    }
+    public int getZekrImage(){
+        return sharedPref.getInt("zekrImage",-1);
     }
 
 }
