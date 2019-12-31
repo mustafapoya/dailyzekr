@@ -28,4 +28,5 @@
     <string name="toggle_quote_notification_details">با فعال یا غیر فعال کردن این گزینه شما میتوانید که جملات بزرگان را در زمان باز کردن برنامه یا تغییر عکس پس زمینه مشاهده نمائید.</string>
     <string name="notification_enabled">اطلاعیه فعال شد</string>
     <string name="notification_disabled">اطلاعیه غیر فعال شد</string>
+    <string name="menu_quote">جملات اسلامی</string>
 </resources>

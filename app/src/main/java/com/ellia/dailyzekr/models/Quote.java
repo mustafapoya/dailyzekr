@@ -2,8 +2,8 @@ package com.ellia.dailyzekr.models;
 
 import androidx.annotation.NonNull;
 
-public class Quotes {
-    public String quote,author;
+public class Quote {
+    public String quote, author;
 
     public void setAuthor(String author) {
         this.author = author;
@@ -24,6 +24,6 @@ public class Quotes {
     @NonNull
     @Override
     public String toString() {
-        return getAuthor()+" , "+ getQuote();
+        return getAuthor() + " , " + getQuote();
     }
 }

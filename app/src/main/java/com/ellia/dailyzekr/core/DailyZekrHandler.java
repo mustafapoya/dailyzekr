@@ -15,10 +15,7 @@ import android.view.WindowManager;
 import com.ellia.dailyzekr.R;
 
 import java.io.IOException;
-import java.net.NetworkInterface;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 
 public class DailyZekrHandler {
 
@@ -29,18 +26,18 @@ public class DailyZekrHandler {
     }
 
     public static int[] daysImages() {
-        int [] images = {R.drawable.a, R.drawable.b, R.drawable.c, R.drawable.d, R.drawable.e, R.drawable.f, R.drawable.g};
+        int[] images = {R.drawable.a, R.drawable.b, R.drawable.c, R.drawable.d, R.drawable.e, R.drawable.f, R.drawable.g};
         return images;
     }
 
-    public static int nameOfTheWeek(){
+    public static int nameOfTheWeek() {
         int dayOfTheWeek = DailyZekrHandler.getTodayName();
 
-        switch (dayOfTheWeek){
+        switch (dayOfTheWeek) {
             case Calendar.SATURDAY:
                 return R.drawable.a;
             case Calendar.SUNDAY:
-                 return R.drawable.b;
+                return R.drawable.b;
             case Calendar.MONDAY:
                 return R.drawable.c;
             case Calendar.TUESDAY:
@@ -59,7 +56,7 @@ public class DailyZekrHandler {
     public static int zekrOfDay() {
         int dayOfTheWeek = DailyZekrHandler.getTodayName();
 
-        switch (dayOfTheWeek){
+        switch (dayOfTheWeek) {
             case Calendar.SATURDAY:
                 return R.string.saturday;
             case Calendar.SUNDAY:
@@ -124,7 +121,7 @@ public class DailyZekrHandler {
 
         Log.d("DailyZekrBroadCast", "trying to change imge: " + todayImage);
 
-        if(todayImage != DailyZekrHandler.getTodayImage(context) || forceSet) {
+        if (todayImage != DailyZekrHandler.getTodayImage(context) || forceSet) {
             DailyZekrHandler.storeTodayImage(context);
 
             Bitmap tempbitMap = BitmapFactory.decodeResource(context.getResources(), todayImage);
@@ -154,7 +151,7 @@ public class DailyZekrHandler {
     }
 
     public static boolean isNetworkAvailable(Context context) {
-        ConnectivityManager connectivityManager = (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
