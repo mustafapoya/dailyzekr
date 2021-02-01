@@ -7,6 +7,7 @@
     <string name="nav_header_subtitle">elliasoft@gmail.com</string>
     <string name="nav_header_desc">ذکر ایام</string>
     <string name="menu_home">خانه</string>
+    <string name="menu_zekrs">ذکر</string>
     <string name="menu_zekr_counter">ذکر شمار</string>
     <string name="menu_setting">تنظیمات</string>
     <string name="menu_about">درباره</string>

@@ -6,6 +6,7 @@
     <string name="nav_header_subtitle">elliasoft@gmail.com</string>
     <string name="nav_header_desc">Daily Zekr</string>
     <string name="menu_home">Home</string>
+    <string name="menu_zekrs">Zekrs</string>
     <string name="menu_zekr_counter">Zekr Counter</string>
     <string name="menu_setting">Setting</string>
     <string name="menu_about">About</string>

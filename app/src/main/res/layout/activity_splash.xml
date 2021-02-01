@@ -27,7 +27,7 @@
         android:layout_marginTop="20dp"
         android:indeterminate="true"
         android:progressTint="#000000"
-        android:indeterminateTint="#FE9003"
+        android:indeterminateTint="#00702d"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgDevTimeLogo" />
