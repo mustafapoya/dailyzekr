@@ -29,4 +29,5 @@
     <string name="toggle_quote_notification_details">You can Enable or Disable to show the Quote Notification when App Started or Changed Background Image</string>
     <string name="notification_enabled">Notification Enabled</string>
     <string name="notification_disabled">Notification Disabled</string>
+    <string name="menu_quote">Islamic Quote</string>
 </resources>

@@ -1,6 +1,5 @@
 package com.ellia.dailyzekr.alarm.manager;
 
-import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -16,7 +15,7 @@ import com.ellia.dailyzekr.R;
 import com.ellia.dailyzekr.core.DailyZekrHandler;
 import com.ellia.dailyzekr.handlers.QuotesManager;
 import com.ellia.dailyzekr.handlers.SharePreferences;
-import com.ellia.dailyzekr.models.Quotes;
+import com.ellia.dailyzekr.models.Quote;
 
 import androidx.core.app.NotificationCompat;
 
@@ -46,7 +45,7 @@ public class MyAlarmService extends BroadcastReceiver {
         PendingIntent resultPendingIntent = PendingIntent.getActivity(mContext,
                 0 /* Request code */, resultIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT);
-        Quotes quotes = new QuotesManager(mContext).getQuotes();
+        Quote quotes = new QuotesManager(mContext).getQuotes();
         mBuilder = new NotificationCompat.Builder(mContext,NOTIFICATION_CHANNEL_ID);
         mBuilder.setSmallIcon(R.drawable.ellia_logo);
         mBuilder.setContentTitle(quotes.getAuthor())

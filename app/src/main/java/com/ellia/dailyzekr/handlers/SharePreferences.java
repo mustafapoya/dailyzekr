@@ -4,29 +4,29 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 public class SharePreferences {
-private static SharePreferences sharedPreferences;
-    private  Context context;
+    private static SharePreferences sharedPreferences;
+    private Context context;
     SharedPreferences sharedPref;
 
-    private SharePreferences(Context context){
-       this.context = context;
-       sharedPref = context.getSharedPreferences("zekr_shared", context.MODE_PRIVATE);
+    private SharePreferences(Context context) {
+        this.context = context;
+        sharedPref = context.getSharedPreferences("zekr_shared", context.MODE_PRIVATE);
     }
 
-    public static SharePreferences getSharedPreferenceObject(Context context){
+    public static SharePreferences getSharedPreferenceObject(Context context) {
         if (sharedPreferences == null) {
             sharedPreferences = new SharePreferences(context);
         }
         return sharedPreferences;
     }
 
-    public void setNotificationStatus(int value){
+    public void setNotificationStatus(int value) {
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putInt("notification", value);
         editor.commit();
     }
 
-    public  int getNotificationStatus() {
+    public int getNotificationStatus() {
         return sharedPref.getInt("notification", 1);
     }
 

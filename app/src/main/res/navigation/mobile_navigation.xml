@@ -23,6 +23,11 @@
         android:label="@string/menu_zekr_counter"
         tools:layout="@layout/fragment_zekr_counter" />
 
+    <fragment
+        android:id="@+id/nav_quote"
+        android:name="com.ellia.dailyzekr.ui.quote.QuoteFragment"
+        android:label="@string/menu_quote"
+        tools:layout="@layout/fragment_quote" />
 
     <fragment
         android:id="@+id/nav_setting"
