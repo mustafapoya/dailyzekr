@@ -1,29 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+
+    android:padding="5dp"
+    android:layout_height="70dp">
 
     <TextView
         android:id="@+id/txtTitle"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="5dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/iran_sans_family"
+        android:maxLines="1"
+        android:text="یا الله"
+        android:textColor="#000"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtSubTitle"
-        android:layout_width="wrap_content"
+        android:id="@+id/txtTitleTrans"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="205dp"
-        android:text="TextView"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/iran_sans_family"
+        android:text="ای خدا"
+        android:textColor="#535252"
+        android:textSize="13sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintEnd_toStartOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="0dp"
+        android:text="+"
+        android:textColor="#2B2B2B"
+        android:textSize="30dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/txtTitle"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="3dp"
+        android:text="000"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintTop_toTopOf="@+id/button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

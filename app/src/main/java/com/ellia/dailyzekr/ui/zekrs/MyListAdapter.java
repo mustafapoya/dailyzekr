@@ -30,6 +30,9 @@ public class MyListAdapter extends ArrayAdapter<String> {
         TextView titleText = (TextView) rowView.findViewById(R.id.txtTitle);
         titleText.setText(maintitle[position]);
 
+        TextView titleTrans = (TextView) rowView.findViewById(R.id.txtTitleTrans);
+        titleTrans.setText(maintitle[position]);
+
         return rowView;
 
     };
