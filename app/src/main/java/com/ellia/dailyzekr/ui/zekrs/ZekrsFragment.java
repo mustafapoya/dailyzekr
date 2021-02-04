@@ -17,7 +17,6 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.ellia.dailyzekr.R;
 import com.ellia.dailyzekr.ui.zekrcounter.ZekrCounterViewModel;
-import com.google.android.gms.ads.InterstitialAd;
 
 public class ZekrsFragment extends Fragment {
     private ZekrCounterViewModel toolsViewModel;
@@ -54,7 +53,7 @@ public class ZekrsFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_zekrs, container, false);
         context = root.getContext();
 
-        MyListAdapter adapter = new MyListAdapter(getActivity(), maintitle, subtitle);
+        ListAdapterZekrCounter adapter = new ListAdapterZekrCounter(getActivity(), maintitle, subtitle);
         list = (ListView)root.findViewById(R.id.list_zekrs);
         list.setAdapter(adapter);
 

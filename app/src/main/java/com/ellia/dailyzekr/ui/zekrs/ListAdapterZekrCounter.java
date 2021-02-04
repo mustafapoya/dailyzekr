@@ -9,12 +9,12 @@ import android.widget.TextView;
 
 import com.ellia.dailyzekr.R;
 
-public class MyListAdapter extends ArrayAdapter<String> {
+public class ListAdapterZekrCounter extends ArrayAdapter<String> {
     private final Activity context;
     private final String[] maintitle;
     private final String[] subtitle;
 
-    public MyListAdapter(Activity context, String[] maintitle,String[] subtitle) {
+    public ListAdapterZekrCounter(Activity context, String[] maintitle, String[] subtitle) {
         super(context, R.layout.list_custom_zekr, maintitle);
 
         this.context = context;

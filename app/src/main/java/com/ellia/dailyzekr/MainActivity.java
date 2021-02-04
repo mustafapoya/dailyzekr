@@ -1,5 +1,6 @@
 package com.ellia.dailyzekr;
 
+import android.app.UiModeManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -16,6 +17,7 @@ import com.google.android.gms.ads.initialization.OnInitializationCompleteListene
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
@@ -51,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_zekrs, R.id.nav_zekr_counter, R.id.nav_setting,
+                R.id.nav_home, R.id.nav_zekrs, R.id.nav_zekr_counter, R.id.nav_quote, R.id.nav_setting,
                 R.id.nav_about)
                 .setDrawerLayout(drawer)
                 .build();

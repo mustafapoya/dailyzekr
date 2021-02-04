@@ -11,6 +11,8 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Random;
 
 public class QuotesManager {
@@ -32,6 +34,25 @@ public class QuotesManager {
             quotes.setAuthor(jsonObject.getString("author"));
             quotes.setQuote(jsonObject.getString("quote"));
             Log.d(TAG, "getQuotes: " + quotes.toString());
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return quotes;
+    }
+
+    public ArrayList<Quote> getAllQuotes() {
+        ArrayList<Quote> quotes = new ArrayList<>();
+        JSONArray data = getJSonData();
+
+        try {
+            for (int i = 0; i < data.length(); i++) {
+                JSONObject jsonObject = data.getJSONObject(i);
+                Quote quote = new Quote();
+                quote.setAuthor(jsonObject.getString("author"));
+                quote.setQuote(jsonObject.getString("quote"));
+                quotes.add(quote);
+            }
         } catch (JSONException e) {
             e.printStackTrace();
         }
