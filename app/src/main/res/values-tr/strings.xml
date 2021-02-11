@@ -28,4 +28,5 @@
     <string name="toggle_quote_notification_details">Uygulama Başlatıldığında veya Değiştirildiğinde Arka Plan Resmi Alıntı Alıntı Bildirimini göstermeyi Etkinleştirebilir veya Devre Dışı Bırakabilirsiniz</string>
     <string name="notification_enabled">Bildirim Etkin</string>
     <string name="notification_disabled">Bildirim Devre Dışı</string>
+    <string name="menu_quote">İslami Alıntı</string>
 </resources>

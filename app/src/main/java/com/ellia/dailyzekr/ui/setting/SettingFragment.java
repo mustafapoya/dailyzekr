@@ -74,9 +74,14 @@ public class SettingFragment extends Fragment {
             }
         });
 
-        mAdView = root.findViewById(R.id.settingAdView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        try {
+            mAdView = root.findViewById(R.id.settingAdView);
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mAdView.loadAd(adRequest);
+        } catch(Exception e) {
+
+        }
+
 
         return root;
     }

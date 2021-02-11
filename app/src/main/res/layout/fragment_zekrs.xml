@@ -23,7 +23,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/iran_sans_bold"
-            android:text="ذکر امروز"
+            android:text="@string/today_zekr"
             android:textColor="#EAE8E8"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -83,7 +83,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.gms.ads.AdView
-        android:id="@+id/homeAdView"
+        android:id="@+id/zekrAdView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -96,7 +96,7 @@
         android:id="@+id/list_zekrs"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/homeAdView"
+        app:layout_constraintBottom_toTopOf="@+id/zekrAdView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />

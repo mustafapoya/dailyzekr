@@ -1,0 +1,53 @@
+{
+  "daily_zekrs": [
+    {
+      "day": "saturday",
+      "zekr": "یا رَبِّ الْعالَمِین",
+      "trans_fa": "ای پروردگار جهانیان",
+      "trans_tr": "Ey tüm yaratıkların efendisi",
+      "trans_hi": "हे प्राणियों के स्वामी"
+    },
+    {
+      "day": "sunday",
+      "zekr": "یا ذَالجَلالِ وَ اْلاِکْرام",
+      "trans_fa": "ای صاحب شکوه و بزرگواری",
+      "trans_tr": "Ey güçlü, cömert",
+      "trans_hi": "हे पराक्रमी, विशाल"
+    },
+    {
+      "day": "monday",
+      "zekr": "یا قاضیَ الحاجات",
+      "trans_fa": "ای برآورنده حاجت ها",
+      "trans_tr": "Ey dileklerine uyan",
+      "trans_hi": "हे कामनाओं का पालन करने वाला"
+    },
+    {
+      "day": "tuesday",
+      "zekr": "یا أَرْحَمَ الرَّاحِمِین",
+      "trans_fa": "ای بخشنده ترین بخشندگان",
+      "trans_tr": "Ey en merhametli",
+      "trans_hi": "हे परम दयालु"
+    },
+    {
+      "day": "wednesday",
+      "zekr": "یا حَیُّ یا قَیّومُ",
+      "trans_fa": "ای زنده، ای پاینده",
+      "trans_tr": "Ey canlı, tükenmez",
+      "trans_hi": "हे जीवित, हे निराकार"
+    },
+    {
+      "day": "thursday",
+      "zekr": "لا إِلهَ إِلَّا اللَّهُ المَلِک الحقّ المُبین",
+      "trans_fa": "معبودی جز خدا نیست؛ پادشاه برحق آشکار",
+      "trans_tr": "Tanrı yok ama haklı olan güçlü, açık olan",
+      "trans_hi": "कोई भगवान नहीं है, लेकिन एक ताकतवर जो सही है, जो स्पष्ट है"
+    },
+    {
+      "day": "friday",
+      "zekr": "الّلهُمَّ صَلِّ عَلَی مُحَمَّدٍ وَآلِ مُحَمَّدٍ",
+      "trans_fa": "خدایا رحمت فرست بر محمد و خاندان محمد",
+      "trans_tr": "O Tanrım! MOHAMMAD ve torunlarına övgü ve selam gönder",
+      "trans_hi": "रब्बा बे! मोहम्मद और उनके वंशजों को अपनी प्रशंसा और शुभकामनाएँ भेजें"
+    }
+  ]
+}

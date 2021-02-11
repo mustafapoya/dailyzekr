@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.ellia.dailyzekr.R;
 import com.ellia.dailyzekr.core.DailyZekrHandler;
@@ -45,9 +46,13 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        mAdView = root.findViewById(R.id.homeAdView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        try {
+            mAdView = root.findViewById(R.id.homeAdView);
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mAdView.loadAd(adRequest);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
 
         return root;
     }

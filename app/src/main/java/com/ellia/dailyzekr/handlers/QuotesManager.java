@@ -11,7 +11,6 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -33,6 +32,10 @@ public class QuotesManager {
             JSONObject jsonObject = data.getJSONObject(getRandomNumber());
             quotes.setAuthor(jsonObject.getString("author"));
             quotes.setQuote(jsonObject.getString("quote"));
+            quotes.setQuoteFarsi(jsonObject.getString("quote_fa"));
+            quotes.setQuoteTurkey(jsonObject.getString("quote_tr"));
+            quotes.setQuoteHindi(jsonObject.getString("quote_hi"));
+
             Log.d(TAG, "getQuotes: " + quotes.toString());
         } catch (JSONException e) {
             e.printStackTrace();
@@ -51,6 +54,10 @@ public class QuotesManager {
                 Quote quote = new Quote();
                 quote.setAuthor(jsonObject.getString("author"));
                 quote.setQuote(jsonObject.getString("quote"));
+                quote.setQuoteFarsi(jsonObject.getString("quote_fa"));
+                quote.setQuoteTurkey(jsonObject.getString("quote_tr"));
+                quote.setQuoteHindi(jsonObject.getString("quote_hi"));
+
                 quotes.add(quote);
             }
         } catch (JSONException e) {

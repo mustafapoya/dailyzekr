@@ -10,7 +10,8 @@ import android.widget.ListView;
 import com.ellia.dailyzekr.R;
 import com.ellia.dailyzekr.handlers.QuotesManager;
 import com.ellia.dailyzekr.models.Quote;
-import com.ellia.dailyzekr.ui.zekrs.ListAdapterZekrCounter;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,6 +24,7 @@ public class QuoteFragment extends Fragment {
 
     private QuoteViewModel quoteViewModel;
     private Context context;
+    private AdView quoteAdView;
 
     ListView list;
 
@@ -41,6 +43,14 @@ public class QuoteFragment extends Fragment {
         ListAdapterQuote adapter = new ListAdapterQuote(getActivity(), quotes);
         list = (ListView)root.findViewById(R.id.list_quotes);
         list.setAdapter(adapter);
+
+        try {
+            quoteAdView = root.findViewById(R.id.quoteAdView);
+            AdRequest adRequest = new AdRequest.Builder().build();
+            quoteAdView.loadAd(adRequest);
+        } catch(Exception e) {
+
+        }
 
         return root;
     }

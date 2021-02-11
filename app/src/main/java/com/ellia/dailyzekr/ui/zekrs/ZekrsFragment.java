@@ -17,10 +17,13 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.ellia.dailyzekr.R;
 import com.ellia.dailyzekr.ui.zekrcounter.ZekrCounterViewModel;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 public class ZekrsFragment extends Fragment {
     private ZekrCounterViewModel toolsViewModel;
     private Context context  = null;
+    private AdView zekrAdView;
 
     ListView list;
     String[] maintitle = {
@@ -60,24 +63,20 @@ public class ZekrsFragment extends Fragment {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
-            if(position == 0) {
-                Toast.makeText(context,"Place Your First Option Code",Toast.LENGTH_SHORT).show();
-                Log.d("list_click", "Item clicked");
-            }
-            else if(position == 1) {
-                Toast.makeText(context,"Place Your Second Option Code",Toast.LENGTH_SHORT).show();
-            }
-            else if(position == 2) {
-                Toast.makeText(context,"Place Your Third Option Code",Toast.LENGTH_SHORT).show();
-            }
-            else if(position == 3) {
-                Toast.makeText(context,"Place Your Forth Option Code",Toast.LENGTH_SHORT).show();
-            }
-            else if(position == 4) {
-                Toast.makeText(context,"Place Your Fifth Option Code",Toast.LENGTH_SHORT).show();
-            }
+                if(position == 0) {
+                    Toast.makeText(context,"Place Your First Option Code", Toast.LENGTH_SHORT).show();
+                    Log.d("list_click", "Item clicked");
+                }
             }
         });
+
+        try {
+            zekrAdView = root.findViewById(R.id.zekrAdView);
+            AdRequest adRequest = new AdRequest.Builder().build();
+            zekrAdView.loadAd(adRequest);
+        }catch(Exception e) {
+
+        }
 
         return root;
     }

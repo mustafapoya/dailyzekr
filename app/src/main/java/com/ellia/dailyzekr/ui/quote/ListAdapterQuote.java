@@ -28,7 +28,20 @@ public class ListAdapterQuote extends ArrayAdapter<Quote> {
         View rowView=inflater.inflate(R.layout.list_custom_quote, null,true);
 
         TextView titleText = (TextView) rowView.findViewById(R.id.txtQuote);
-        titleText.setText(quotes.get(position).quote);
+        switch (rowView.getResources().getConfiguration().locale.getLanguage()) {
+            case "fa":
+                titleText.setText(quotes.get(position).quoteFarsi);
+                break;
+            case "tr":
+                titleText.setText(quotes.get(position).quoteTurkey);
+                break;
+            case "hi":
+                titleText.setText(quotes.get(position).quoteHindi);
+                break;
+            default:
+                titleText.setText(quotes.get(position).quote);
+                break;
+        }
 
         TextView titleTrans = (TextView) rowView.findViewById(R.id.txtAuthor);
         titleTrans.setText(quotes.get(position).author);

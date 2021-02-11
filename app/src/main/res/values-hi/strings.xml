@@ -29,4 +29,5 @@
     <string name="toggle_quote_notification_details">जब अनुप्रयोग प्रारंभ या परिवर्तित पृष्ठभूमि छवि हो, तो आप उद्धरण अधिसूचना दिखाने के लिए सक्षम या अक्षम कर सकते हैं</string>
     <string name="notification_enabled">अधिसूचना सक्षम है</string>
     <string name="notification_disabled">अधिसूचना अक्षम</string>
+    <string name="menu_quote">इस्लामिक उद्धरण</string>
 </resources>

@@ -46,12 +46,30 @@ public class MyAlarmService extends BroadcastReceiver {
                 0 /* Request code */, resultIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT);
         Quote quotes = new QuotesManager(mContext).getQuotes();
+
+        String quoteText = "";
+
+        switch (mContext.getResources().getConfiguration().locale.getLanguage()) {
+            case "fa":
+                quoteText  = quotes.getQuoteFarsi();
+                break;
+            case "tr":
+                quoteText  = quotes.getQuoteTurkey();
+                break;
+            case "hi":
+                quoteText  = quotes.getQuoteHindi();
+                break;
+            default:
+                quoteText  = quotes.getQuote();
+                break;
+        }
+
         mBuilder = new NotificationCompat.Builder(mContext,NOTIFICATION_CHANNEL_ID);
         mBuilder.setSmallIcon(R.drawable.ellia_logo);
         mBuilder.setContentTitle(quotes.getAuthor())
-                .setContentText(quotes.getQuote())
+                .setContentText(quoteText)
                 .setAutoCancel(false)
-                .setStyle(new NotificationCompat.BigTextStyle().bigText(quotes.getQuote()))
+                .setStyle(new NotificationCompat.BigTextStyle().bigText(quoteText))
                 .setSound(Settings.System.DEFAULT_NOTIFICATION_URI)
                 .setContentIntent(resultPendingIntent);
 
@@ -68,8 +86,8 @@ public class MyAlarmService extends BroadcastReceiver {
             mBuilder.setChannelId(NOTIFICATION_CHANNEL_ID);
             mBuilder.setSmallIcon(R.drawable.ellia_logo);
             mBuilder.setContentTitle(quotes.getAuthor());
-            mBuilder.setContentText(quotes.getQuote());
-            mBuilder.setStyle(new NotificationCompat.BigTextStyle().bigText(quotes.getQuote()));
+            mBuilder.setContentText(quoteText);
+            mBuilder.setStyle(new NotificationCompat.BigTextStyle().bigText(quoteText));
             mNotificationManager.createNotificationChannel(notificationChannel);
         }
         assert mNotificationManager != null;

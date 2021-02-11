@@ -5,19 +5,21 @@
     android:layout_width="match_parent"
     android:background="#fff"
     app:chainUseRtl="false"
+    android:padding="2dp"
     android:layout_height="match_parent">
 
     <ListView
         android:id="@+id/list_quotes"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/homeAdView"
+        android:dividerHeight="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/quoteAdView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.gms.ads.AdView
-        android:id="@+id/homeAdView"
+        android:id="@+id/quoteAdView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
