@@ -37,7 +37,6 @@ public class QuoteFragment extends Fragment {
         context = root.getContext();
 
         QuotesManager quotesManager = new QuotesManager(context);
-
         ArrayList<Quote> quotes = quotesManager.getAllQuotes();
 
         ListAdapterQuote adapter = new ListAdapterQuote(getActivity(), quotes);

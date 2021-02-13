@@ -19,7 +19,7 @@
         android:textColor="#000"
         android:textSize="17sp"
         android:padding="3dp"
-        android:lineHeight="3sp"
+
         android:lineSpacingExtra="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

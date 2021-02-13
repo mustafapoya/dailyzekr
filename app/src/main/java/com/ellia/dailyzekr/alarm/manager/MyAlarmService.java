@@ -45,7 +45,7 @@ public class MyAlarmService extends BroadcastReceiver {
         PendingIntent resultPendingIntent = PendingIntent.getActivity(mContext,
                 0 /* Request code */, resultIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT);
-        Quote quotes = new QuotesManager(mContext).getQuotes();
+        Quote quotes = new QuotesManager(mContext).getRandomQuote();
 
         String quoteText = "";
 

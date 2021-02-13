@@ -4,6 +4,7 @@ import android.content.Context;
 import android.util.Log;
 
 import com.ellia.dailyzekr.models.Quote;
+import com.ellia.dailyzekr.models.Zekr;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -14,56 +15,50 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class QuotesManager {
-
+public class ZekrsManager {
     private Context context;
-    public Quote quotes;
-    public final String TAG = "QuotesManager";
+    public Zekr zekr;
+    public final String TAG = "ZekrsManager";
 
-    public QuotesManager(Context context) {
+    public ZekrsManager(Context context) {
         this.context = context;
     }
 
-    public Quote getRandomQuote() {
-        quotes = new Quote();
+    public Zekr getRandomZekr() {
+        zekr = new Zekr();
         JSONArray data = getJSonData();
 
         try {
             JSONObject jsonObject = data.getJSONObject(getRandomNumber());
-            quotes.setAuthor(jsonObject.getString("author"));
-            quotes.setQuote(jsonObject.getString("quote"));
-            quotes.setQuoteFarsi(jsonObject.getString("quote_fa"));
-            quotes.setQuoteTurkey(jsonObject.getString("quote_tr"));
-            quotes.setQuoteHindi(jsonObject.getString("quote_hi"));
+            zekr.setZekr(jsonObject.getString("author"));
+            zekr.setTrans(jsonObject.getString("quote"));
 
-            Log.d(TAG, "getRandomQuote: " + quotes.toString());
+
+            Log.d(TAG, "getRandomZekr: " + zekr.toString());
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
-        return quotes;
+        return zekr;
     }
 
-    public ArrayList<Quote> getAllQuotes() {
-        ArrayList<Quote> quotes = new ArrayList<>();
+    public ArrayList<Zekr> getAllZekrs() {
+        ArrayList<Zekr> zekrs = new ArrayList<>();
         JSONArray data = getJSonData();
 
         try {
             for (int i = 0; i < data.length(); i++) {
                 JSONObject jsonObject = data.getJSONObject(i);
-                Quote quote = new Quote();
-                quote.setAuthor(jsonObject.getString("author"));
-                quote.setQuote(jsonObject.getString("quote"));
-                quote.setQuoteFarsi(jsonObject.getString("quote_fa"));
-                quote.setQuoteTurkey(jsonObject.getString("quote_tr"));
-                quote.setQuoteHindi(jsonObject.getString("quote_hi"));
-                quotes.add(quote);
+                Zekr zekr = new Zekr();
+                zekr.setZekr(jsonObject.getString("zekr"));
+                zekr.setTrans(jsonObject.getString("trans"));
+                zekrs.add(zekr);
             }
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
-        return quotes;
+        return zekrs;
     }
 
     public int getRandomNumber() {
@@ -76,7 +71,7 @@ public class QuotesManager {
 
         try {
             JSONObject obj = new JSONObject(loadJSONFromAsset());
-            allQuotes = obj.getJSONArray("quotes");
+            allQuotes = obj.getJSONArray("zekrs");
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -87,7 +82,7 @@ public class QuotesManager {
         String jsonData = null;
 
         try {
-            InputStream is = context.getAssets().open("quotes.json");
+            InputStream is = context.getAssets().open("zekrs.json");
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
@@ -97,6 +92,7 @@ public class QuotesManager {
             ex.printStackTrace();
             return null;
         }
+
         return jsonData;
     }
 }

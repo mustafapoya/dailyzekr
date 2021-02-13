@@ -16,9 +16,15 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.ellia.dailyzekr.R;
+import com.ellia.dailyzekr.handlers.QuotesManager;
+import com.ellia.dailyzekr.handlers.ZekrsManager;
+import com.ellia.dailyzekr.models.Quote;
+import com.ellia.dailyzekr.models.Zekr;
 import com.ellia.dailyzekr.ui.zekrcounter.ZekrCounterViewModel;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+
+import java.util.ArrayList;
 
 public class ZekrsFragment extends Fragment {
     private ZekrCounterViewModel toolsViewModel;
@@ -26,29 +32,6 @@ public class ZekrsFragment extends Fragment {
     private AdView zekrAdView;
 
     ListView list;
-    String[] maintitle = {
-            "یا الله",
-            "تسبیحات حضرت زهرا",
-            "تسبیحات اربعه",
-            "ذکر یونسیه",
-            "الله اکبر",
-            "سبحان اللله",
-            "لا اله الا الله",
-            "اللهم صل علی محمد",
-            "لا حول و لا قوه الا بالله العلی العظیم"
-    };
-
-    String[] subtitle = {
-            "ای خدا",
-            "الله اکبر، الحمدالله، سبحان الله",
-            "سبحان الله، و الحمدالله، و لا اله الا الله",
-            "لا اله الا انت سبحانک انی کنت من الظالمین",
-            "",
-            "خدا بزرگ است",
-            "منزه است خداوند",
-            "خدایا درود بفرست بر محمد و آل محمد",
-            "جنبش و نیرویی نیست جز به خدای والای بزرگ"
-    };
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         /*setHasOptionsMenu(true);*/
@@ -56,7 +39,10 @@ public class ZekrsFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_zekrs, container, false);
         context = root.getContext();
 
-        ListAdapterZekrCounter adapter = new ListAdapterZekrCounter(getActivity(), maintitle, subtitle);
+        ZekrsManager zekrsManager = new ZekrsManager(context);
+        ArrayList<Zekr> zekrs = zekrsManager.getAllZekrs();
+
+        ListAdapterZekrCounter adapter = new ListAdapterZekrCounter(getActivity(), zekrs);
         list = (ListView)root.findViewById(R.id.list_zekrs);
         list.setAdapter(adapter);
 

@@ -8,19 +8,20 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.ellia.dailyzekr.R;
+import com.ellia.dailyzekr.models.Quote;
+import com.ellia.dailyzekr.models.Zekr;
 
-public class ListAdapterZekrCounter extends ArrayAdapter<String> {
+import java.util.ArrayList;
+
+public class ListAdapterZekrCounter extends ArrayAdapter<Zekr> {
     private final Activity context;
-    private final String[] maintitle;
-    private final String[] subtitle;
+    private final ArrayList<Zekr> zekrs;
 
-    public ListAdapterZekrCounter(Activity context, String[] maintitle, String[] subtitle) {
-        super(context, R.layout.list_custom_zekr, maintitle);
+    public ListAdapterZekrCounter(Activity context, ArrayList<Zekr> zekrs) {
+        super(context, R.layout.list_custom_zekr, zekrs);
 
         this.context = context;
-        this.maintitle = maintitle;
-        this.subtitle = subtitle;
-
+        this.zekrs = zekrs;
     }
 
     public View getView(int position, View view, ViewGroup parent) {
@@ -28,10 +29,10 @@ public class ListAdapterZekrCounter extends ArrayAdapter<String> {
         View rowView=inflater.inflate(R.layout.list_custom_zekr, null,true);
 
         TextView titleText = (TextView) rowView.findViewById(R.id.txtTitle);
-        titleText.setText(maintitle[position]);
+        titleText.setText(zekrs.get(position).getZekr());
 
         TextView titleTrans = (TextView) rowView.findViewById(R.id.txtTitleTrans);
-        titleTrans.setText(maintitle[position]);
+        titleTrans.setText(zekrs.get(position).getTrans());
 
         return rowView;
 
