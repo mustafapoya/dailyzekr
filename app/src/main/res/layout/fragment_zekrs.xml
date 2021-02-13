@@ -60,20 +60,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="20dp"
-            android:fontFamily="@font/iran_sans_family"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/iran_sans_bold"
             android:text="سه شنبه"
             android:textColor="#EAE8E8"
-            android:textSize="15sp"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/txtTodayDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginEnd="10dp"
             android:text="1399/11/15"
             android:textColor="#fff"
             android:textSize="17sp"
@@ -99,5 +99,6 @@
         app:layout_constraintBottom_toTopOf="@+id/zekrAdView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:dividerHeight="3dp"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>
