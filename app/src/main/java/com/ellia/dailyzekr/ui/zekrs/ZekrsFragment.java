@@ -1,15 +1,14 @@
 package com.ellia.dailyzekr.ui.zekrs;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,18 +19,14 @@ import com.ellia.dailyzekr.R;
 import com.ellia.dailyzekr.core.CalendarTool;
 import com.ellia.dailyzekr.core.DailyZekrHandler;
 import com.ellia.dailyzekr.handlers.DailyZekrManager;
-import com.ellia.dailyzekr.handlers.QuotesManager;
 import com.ellia.dailyzekr.handlers.ZekrsManager;
 import com.ellia.dailyzekr.models.DailyZekr;
-import com.ellia.dailyzekr.models.Quote;
 import com.ellia.dailyzekr.models.Zekr;
+import com.ellia.dailyzekr.ui.zekrcounter.ZekrCounterActivity;
 import com.ellia.dailyzekr.ui.zekrcounter.ZekrCounterViewModel;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
-import org.w3c.dom.Text;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Calendar;
 
@@ -48,8 +43,8 @@ public class ZekrsFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_zekrs, container, false);
         context = root.getContext();
 
-        TextView txtTodayZekr = (TextView)root.findViewById(R.id.txtTodayZekr);
-        TextView txtTodayZekrTrans = (TextView)root.findViewById(R.id.txtTodayZekrTrans);
+        TextView txtTodayZekr = (TextView)root.findViewById(R.id.txtZekrText);
+        TextView txtTodayZekrTrans = (TextView)root.findViewById(R.id.txtZekrTrans);
         TextView txtTodayName = (TextView)root.findViewById(R.id.txtTodayName);
         TextView txtTodayDate = (TextView)root.findViewById(R.id.txtTodayDate);
 
@@ -74,10 +69,9 @@ public class ZekrsFragment extends Fragment {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
-                if(position == 0) {
-                    Toast.makeText(context,"Place Your First Option Code", Toast.LENGTH_SHORT).show();
-                    Log.d("list_click", "Item clicked");
-                }
+                Intent intent = new Intent(context, ZekrCounterActivity.class);
+                intent.putExtra("selected_zekr_position", String.valueOf(position));
+                startActivity(intent);
             }
         });
 

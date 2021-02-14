@@ -30,7 +30,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/txtTodayZekr"
+            android:id="@+id/txtZekrText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -43,7 +43,7 @@
             app:layout_constraintTop_toBottomOf="@+id/txtTitleTodayZekr" />
 
         <TextView
-            android:id="@+id/txtTodayZekrTrans"
+            android:id="@+id/txtZekrTrans"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -53,7 +53,7 @@
             android:textColor="#EAE8E8"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtTodayZekr" />
+            app:layout_constraintTop_toBottomOf="@+id/txtZekrText" />
 
         <TextView
             android:id="@+id/txtTodayName"

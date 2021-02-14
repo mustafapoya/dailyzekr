@@ -43,7 +43,7 @@ public class ZekrCounterFragment extends Fragment {
         context = root.getContext();
         countNumber = DailyZekrHandler.getZekrCounterNumber(context);
 
-        TextView txtTodayZekr        = root.findViewById(R.id.txtTodayZekr);
+        TextView txtTodayZekr        = root.findViewById(R.id.txtZekrText);
         final TextView txtZekrNumber = root.findViewById(R.id.txtZekrNumber);
         txtZekrNumber.setText(String.format("%04d", countNumber));
 
