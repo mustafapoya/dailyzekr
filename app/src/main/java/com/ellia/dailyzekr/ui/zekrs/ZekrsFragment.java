@@ -17,6 +17,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.ellia.dailyzekr.R;
+import com.ellia.dailyzekr.core.CalendarTool;
 import com.ellia.dailyzekr.core.DailyZekrHandler;
 import com.ellia.dailyzekr.handlers.DailyZekrManager;
 import com.ellia.dailyzekr.handlers.QuotesManager;
@@ -55,13 +56,13 @@ public class ZekrsFragment extends Fragment {
         DailyZekrManager dailyZekrsManager = new DailyZekrManager(context);
         ArrayList<DailyZekr> dailyZekrs = dailyZekrsManager.getAllDayZekrs();
 
-
-        DailyZekr todayZekr = dailyZekrs.get(todayZekr()+6);
+        DailyZekr todayZekr = dailyZekrs.get(todayZekr());
         txtTodayZekr.setText(todayZekr.getZekr());
         txtTodayZekrTrans.setText(todayZekr.getFarsi());
         txtTodayName.setText(todayName());
 
-
+        CalendarTool calendarTool = new CalendarTool();
+        txtTodayDate.setText(calendarTool.getIranianDate().toString());
 
         ZekrsManager zekrsManager = new ZekrsManager(context);
         ArrayList<Zekr> zekrs = zekrsManager.getAllZekrs();
