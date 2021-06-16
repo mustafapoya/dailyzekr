@@ -23,7 +23,7 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-9778979220370457~9773548477" />
+            android:value="ca-app-pub-3540008829614888~3883511637" />
 
         <receiver android:name=".core.DailyZekrBroadcastReceiver" android:enabled="true" >
             <intent-filter>

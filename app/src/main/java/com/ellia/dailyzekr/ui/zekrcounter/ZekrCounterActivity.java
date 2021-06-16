@@ -90,10 +90,10 @@ public class ZekrCounterActivity extends AppCompatActivity {
 
         mInterstitialAd = new InterstitialAd(context);
         /*
-        correct id: ca-app-pub-9778979220370457/5551080472
+        correct id: ca-app-pub-3540008829614888/9797063739
         Test    id: ca-app-pub-3940256099942544/1033173712
         */
-        mInterstitialAd.setAdUnitId("ca-app-pub-9778979220370457/5551080472");
+        mInterstitialAd.setAdUnitId("ca-app-pub-3540008829614888/9797063739");
 
         btnCount.setOnClickListener(new View.OnClickListener() {
             @Override

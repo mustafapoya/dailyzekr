@@ -59,8 +59,8 @@ public class ZekrCounterFragment extends Fragment {
         alertDialogBuilder.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                txtZekrNumber.setText(String.format("%04d", 0));
-                countNumber = 0;
+            txtZekrNumber.setText(String.format("%04d", 0));
+            countNumber = 0;
             }
         });
 
@@ -72,10 +72,10 @@ public class ZekrCounterFragment extends Fragment {
 
         mInterstitialAd = new InterstitialAd(context);
         /*
-        correct id: ca-app-pub-9778979220370457/5551080472
+        correct id: ca-app-pub-3540008829614888/9797063739
         Test    id: ca-app-pub-3940256099942544/1033173712
         */
-        mInterstitialAd.setAdUnitId("ca-app-pub-9778979220370457/5551080472");
+        mInterstitialAd.setAdUnitId("ca-app-pub-3540008829614888/9797063739");
 
         txtTodayZekr.setText(DailyZekrHandler.zekrOfDay());
 
