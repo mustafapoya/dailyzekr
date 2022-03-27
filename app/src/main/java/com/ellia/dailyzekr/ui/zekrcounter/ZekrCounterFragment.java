@@ -44,6 +44,8 @@ public class ZekrCounterFragment extends Fragment {
         countNumber = DailyZekrHandler.getZekrCounterNumber(context);
 
         TextView txtTodayZekr        = root.findViewById(R.id.txtZekrText);
+        TextView txtTodayZekrTrans   = root.findViewById(R.id.txtZekrTrans);
+
         final TextView txtZekrNumber = root.findViewById(R.id.txtZekrNumber);
         txtZekrNumber.setText(String.format("%04d", countNumber));
 
@@ -78,6 +80,7 @@ public class ZekrCounterFragment extends Fragment {
         mInterstitialAd.setAdUnitId("ca-app-pub-3540008829614888/9797063739");
 
         txtTodayZekr.setText(DailyZekrHandler.zekrOfDay());
+//        txtTodayZekrTrans.setText(DailyZekrHandler.zekrOfDay());
 
         btnCount.setOnClickListener(new View.OnClickListener() {
             @Override

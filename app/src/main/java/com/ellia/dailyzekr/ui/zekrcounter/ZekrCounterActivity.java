@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.ellia.dailyzekr.R;
 import com.ellia.dailyzekr.core.DailyZekrHandler;
+import com.ellia.dailyzekr.handlers.UtilController;
 import com.ellia.dailyzekr.handlers.ZekrsManager;
 import com.ellia.dailyzekr.models.Zekr;
 import com.google.android.gms.ads.AdListener;
@@ -58,7 +59,7 @@ public class ZekrCounterActivity extends AppCompatActivity {
         txtZekrText.setText(zekr.getZekr());
 
         TextView txtZekrTrans = (TextView) findViewById(R.id.txtZekrTrans);
-        txtZekrTrans.setText(zekr.getTrans());
+        txtZekrTrans.setText(UtilController.getZekrTrans(zekr));
 
         countNumber = 0;
         final TextView txtZekrNumber = findViewById(R.id.txtZekrNumber);

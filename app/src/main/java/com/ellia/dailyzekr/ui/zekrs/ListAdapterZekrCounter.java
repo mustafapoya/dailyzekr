@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.ellia.dailyzekr.R;
+import com.ellia.dailyzekr.handlers.UtilController;
 import com.ellia.dailyzekr.models.Quote;
 import com.ellia.dailyzekr.models.Zekr;
 
@@ -32,7 +33,7 @@ public class ListAdapterZekrCounter extends ArrayAdapter<Zekr> {
         titleText.setText(zekrs.get(position).getZekr());
 
         TextView titleTrans = (TextView) rowView.findViewById(R.id.txtTitleTrans);
-        titleTrans.setText(zekrs.get(position).getTrans());
+        titleTrans.setText(UtilController.getZekrTrans(zekrs.get(position)));
 
         return rowView;
 

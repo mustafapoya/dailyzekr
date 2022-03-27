@@ -19,6 +19,7 @@ import com.ellia.dailyzekr.R;
 import com.ellia.dailyzekr.core.CalendarTool;
 import com.ellia.dailyzekr.core.DailyZekrHandler;
 import com.ellia.dailyzekr.handlers.DailyZekrManager;
+import com.ellia.dailyzekr.handlers.UtilController;
 import com.ellia.dailyzekr.handlers.ZekrsManager;
 import com.ellia.dailyzekr.models.DailyZekr;
 import com.ellia.dailyzekr.models.Zekr;
@@ -29,6 +30,7 @@ import com.google.android.gms.ads.AdView;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Locale;
 
 public class ZekrsFragment extends Fragment {
     private ZekrCounterViewModel toolsViewModel;
@@ -46,18 +48,14 @@ public class ZekrsFragment extends Fragment {
         TextView txtTodayZekr = (TextView)root.findViewById(R.id.txtZekrText);
         TextView txtTodayZekrTrans = (TextView)root.findViewById(R.id.txtZekrTrans);
         TextView txtTodayName = (TextView)root.findViewById(R.id.txtTodayName);
-        TextView txtTodayDate = (TextView)root.findViewById(R.id.txtTodayDate);
 
         DailyZekrManager dailyZekrsManager = new DailyZekrManager(context);
         ArrayList<DailyZekr> dailyZekrs = dailyZekrsManager.getAllDayZekrs();
 
-        DailyZekr todayZekr = dailyZekrs.get(todayZekr());
+        DailyZekr todayZekr = dailyZekrs.get(UtilController.todayZekr());
         txtTodayZekr.setText(todayZekr.getZekr());
-        txtTodayZekrTrans.setText(todayZekr.getFarsi());
-        txtTodayName.setText(todayName());
-
-        CalendarTool calendarTool = new CalendarTool();
-        txtTodayDate.setText(calendarTool.getIranianDate().toString());
+        txtTodayZekrTrans.setText(UtilController.getZekrDescription(todayZekr));
+        txtTodayName.setText(UtilController.todayName(context));
 
         ZekrsManager zekrsManager = new ZekrsManager(context);
         ArrayList<Zekr> zekrs = zekrsManager.getAllZekrs();
@@ -80,55 +78,9 @@ public class ZekrsFragment extends Fragment {
             AdRequest adRequest = new AdRequest.Builder().build();
             zekrAdView.loadAd(adRequest);
         }catch(Exception e) {
-
+            e.printStackTrace();
         }
 
         return root;
-    }
-
-    public static int todayZekr() {
-        int dayOfTheWeek = DailyZekrHandler.getTodayName();
-
-        switch (dayOfTheWeek) {
-            case Calendar.SATURDAY:
-                return 0;
-            case Calendar.SUNDAY:
-                return 1;
-            case Calendar.MONDAY:
-                return 2;
-            case Calendar.TUESDAY:
-                return 3;
-            case Calendar.WEDNESDAY:
-                return 4;
-            case Calendar.THURSDAY:
-                return 5;
-            case Calendar.FRIDAY:
-                return 6;
-            default:
-                return 0;
-        }
-    }
-
-    public static String todayName() {
-        int dayOfTheWeek = DailyZekrHandler.getTodayName();
-
-        switch (dayOfTheWeek) {
-            case Calendar.SATURDAY:
-                return "شنبه";
-            case Calendar.SUNDAY:
-                return "یکشنبه";
-            case Calendar.MONDAY:
-                return "دوشنبه";
-            case Calendar.TUESDAY:
-                return "سه شنبه";
-            case Calendar.WEDNESDAY:
-                return "چهارشنبه";
-            case Calendar.THURSDAY:
-                return "پنجشنبه";
-            case Calendar.FRIDAY:
-                return "جمعه";
-            default:
-                return "نامشخص";
-        }
     }
 }
