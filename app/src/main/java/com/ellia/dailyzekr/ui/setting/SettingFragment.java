@@ -7,7 +7,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.CompoundButton;
+import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.Toast;
 
@@ -16,6 +19,7 @@ import com.ellia.dailyzekr.core.DailyBroadcastReceiverService;
 import com.ellia.dailyzekr.core.DailyZekrHandler;
 import com.ellia.dailyzekr.core.DailyZekrImageServiceStatus;
 import com.ellia.dailyzekr.handlers.SharePreferences;
+import com.ellia.dailyzekr.handlers.UtilController;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
@@ -29,6 +33,7 @@ public class SettingFragment extends Fragment {
     private AdView mAdView;
     private Switch switchServiceStatus;
     private Switch switchNotification;
+    private Spinner spinnerLanguage;
 
     public View onCreateView(@NonNull LayoutInflater inflater, final ViewGroup container, Bundle savedInstanceState) {
         settingViewModel =
@@ -38,6 +43,48 @@ public class SettingFragment extends Fragment {
         final Context context = root.getContext();
         switchServiceStatus = root.findViewById(R.id.switchImageService);
         switchNotification = root.findViewById(R.id.swithDisableNotification);
+        spinnerLanguage = root.findViewById(R.id.spinnerLanguage);
+
+        String[] arraySpinnerLanguage = new String[] {
+                "english",
+                "farsi",
+                "hindi",
+                "turkey"
+        };
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(context, android.R.layout.simple_spinner_item, arraySpinnerLanguage);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerLanguage.setAdapter(adapter);
+
+        spinnerLanguage.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                switch (position){
+                    case 0:
+                        UtilController.setLocale(context, "en");
+                        break;
+                    case 1:
+                        UtilController.setLocale(context, "fa");
+                        break;
+                    case 2:
+                        UtilController.setLocale(context, "hi");
+                        break;
+                    case 3:
+                        UtilController.setLocale(context, "tr");
+                        break;
+                    default:
+                        UtilController.setLocale(context, "en");
+                        break;
+                }
+                
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                spinnerLanguage.setSelection(0);
+            }
+        });
+
 
         switchServiceStatus.setChecked(DailyZekrHandler.getDailyZekrServiceStatus(context) == DailyZekrImageServiceStatus.ON.getValue() ? true : false);
         Log.d("CheckService", "isRunning: " + isMyServiceRunning(DailyBroadcastReceiverService.class, context));
