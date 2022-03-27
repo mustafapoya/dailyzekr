@@ -17,15 +17,16 @@
         <receiver
             android:name=".alarm.manager.MyAlarmService"
             android:enabled="true"
-            android:exported="true"></receiver>
+            android:exported="true"/>
 
 
-
+        <!-- Real AdMob app ID: ca-app-pub-3540008829614888~3883511637 -->
+        <!-- Test AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3540008829614888~3883511637" />
 
-        <receiver android:name=".core.DailyZekrBroadcastReceiver" android:enabled="true" >
+        <receiver android:name=".core.DailyZekrBroadcastReceiver" android:enabled="true" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.TIMEZONE_CHANGED" />
                 <action android:name="android.intent.action.ACTION_TIME_TICK"/>
@@ -47,6 +48,7 @@
             </intent-filter>
         </activity>
         <activity
+            android:configChanges="locale|layoutDirection"
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" >
