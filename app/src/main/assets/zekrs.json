@@ -50,29 +50,32 @@
       "trans_tr":  "Allah Muhammed'i ve Muhammed'in ailesini korusun"
     },
     {
-      "zekr":"یا الله",
-      "trans": "ای خدا"
+      "zekr": "یا الله",
+      "trans": "خدایا",
+      "trans_en": "oh god",
+      "trans_hi": "हाय भगवान्",
+      "trans_tr": "Aman Tanrım"
     },
     {
-      "zekr": "تسبیحات حضرت زهرا",
-      "trans":  "اَللَّهُ أَکْبَرُ، الحمدُ للّه، سُبْحانَ اللَّهِ",
-      "trans_en":  "Praises of Hazrat Zahra",
-      "trans_hi":  "हज़रत ज़हरा की स्तुति",
-      "trans_tr":  "Hazreti Zehra'nın Övgüleri"
+      "zekr": "اَللَّهُ أَکْبَرُ، الحمدُ للّه، سُبْحانَ اللَّه",
+      "trans":  "خداوند بزرگ است، الحمدلله، سبحان الله",
+      "trans_en":  "God is the greatest, praise be to God, glory be to God",
+      "trans_hi":  "भगवान सबसे महान है, भगवान की स्तुति हो, भगवान की महिमा हो।",
+      "trans_tr":  "Allah en büyüktür, hamd Allah'a mahsustur, yücelik Allah'a mahsustur"
     },
     {
-      "zekr": "تسبیحات اربعه",
-      "trans":  "سُبْحانَ اللهِ، وَ الْحَمْدُ لِلهِ، وَ لا إلهَ إلاّ اللهُ، وَ اللهُ أکْبَرُ",
-      "trans_en":  "Four praises",
-      "trans_hi":  "चार स्तुति",
-      "trans_tr":  "dört övgü"
+      "zekr": "سُبْحانَ اللهِ، وَ الْحَمْدُ لِلهِ، وَ لا إلهَ إلاّ اللهُ، وَ اللهُ أکْبَرُ",
+      "trans":  "سبحان الله و حمد لله لا اله الا الله و الله اکبر",
+      "trans_en":  "Glory be to God, praise be to God, there is no god but God, and God is the greatest",
+      "trans_hi":  "भगवान की जय हो, भगवान की स्तुति हो, भगवान के अलावा कोई भगवान नहीं है, और भगवान सबसे महान है",
+      "trans_tr":  "Hamd Allah'a mahsustur, hamd Allah'a mahsustur, Allah'tan başka ilah yoktur ve Allah en büyüktür"
     },
     {
-      "zekr": "ذکر یونسیه",
-      "trans":  "لَّا إِلَهَ إِلَّا أَنتَ سُبْحَانَک إِنِّی کنتُ مِنَ الظَّالِمِینَ",
-      "trans_en":  "male unicorn",
-      "trans_hi":  "नर गेंडा",
-      "trans_tr":  "erkek tek boynuzlu at"
+      "zekr": "لَّا إِلَهَ إِلَّا أَنتَ سُبْحَانَک إِنِّی کنتُ مِنَ الظَّالِمِین",
+      "trans":  "َمعبودی جز تو نیست، منزهی تو که من از ستمکاران بودم",
+      "trans_en":  "There is no god but You, Glory be to You, for I was among the wrongdoers",
+      "trans_hi":  "तेरे सिवा कोई ईश्वर नहीं, तेरी जय हो, क्योंकि मैं अधर्मियों में से था।",
+      "trans_tr":  "Senden başka ilah yoktur, hamd sanadır, çünkü ben zalimlerdendim"
     },
     {
       "zekr": "اَللَّهُ أَکْبَر",
@@ -107,7 +110,7 @@
       "trans":  "هیچ نیرو و توانى جز از سوى خداوند بلندمرتبه و بزرگ نیست",
       "trans_en":  "There is neither might nor power except with God, the Exalted, the Great",
       "trans_hi":  "ईश्वर, महान, महान के अलावा न तो शक्ति है और न ही शक्ति",
-      "trans_tr":  "Yüce ve Büyük Allah'tan başka güç ve kuvvet yoktur."
+      "trans_tr":  "Yüce ve Büyük Allah'tan başka güç ve kuvvet yoktur"
     },
     {
       "zekr": "یا فَتَّاح",
@@ -135,7 +138,7 @@
       "trans": "به نام خداوند هیچ قدرت و قوتی نیست مگر با کمک خداوند ، واگذار می کنم کارهایم را بر خدا",
       "trans_en":  "In the name of God, and there is no might or power except in God, I put my trust in God",
       "trans_hi":  "ईश्वर के नाम पर, और ईश्वर के अलावा कोई शक्ति या शक्ति नहीं है, मैंने ईश्वर पर अपना भरोसा रखा है",
-      "trans_tr":  "Allah'ın adıyla ve Allah'tan başka hiçbir güç ve kuvvet yoktur, ben Allah'a tevekkül ettim."
+      "trans_tr":  "Allah'ın adıyla ve Allah'tan başka hiçbir güç ve kuvvet yoktur, ben Allah'a tevekkül ettim"
     },
     {
       "zekr": "أَلَا بِذِکْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ",
