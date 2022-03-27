@@ -30,4 +30,12 @@
     <string name="notification_enabled">اطلاعیه فعال شد</string>
     <string name="notification_disabled">اطلاعیه غیر فعال شد</string>
     <string name="menu_quote">جملات اسلامی</string>
+    <string name="day_saturday">شنبه</string>
+    <string name="day_sunday">یکشنبه</string>
+    <string name="day_monday">دوشنبه</string>
+    <string name="day_tuesday">سه شنبه</string>
+    <string name="day_wednesday">چهارشنبه</string>
+    <string name="day_thursday">پنجشنبه</string>
+    <string name="day_friday">فردا</string>
+    <string name="language">Language</string>
 </resources>

@@ -30,4 +30,12 @@
     <string name="notification_enabled">अधिसूचना सक्षम है</string>
     <string name="notification_disabled">अधिसूचना अक्षम</string>
     <string name="menu_quote">इस्लामिक उद्धरण</string>
+    <string name="day_saturday">शनिवार</string>
+    <string name="day_sunday">रविवार</string>
+    <string name="day_monday">सोमवार</string>
+    <string name="day_tuesday">मंगलवार</string>
+    <string name="day_wednesday">बुधवार</string>
+    <string name="day_thursday">गुरूवार</string>
+    <string name="day_friday">शुक्रवार</string>
+    <string name="language">Language</string>
 </resources>

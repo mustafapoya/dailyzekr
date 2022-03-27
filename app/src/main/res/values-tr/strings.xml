@@ -29,4 +29,12 @@
     <string name="notification_enabled">Bildirim Etkin</string>
     <string name="notification_disabled">Bildirim Devre Dışı</string>
     <string name="menu_quote">İslami Alıntı</string>
+    <string name="day_saturday">Cumartesi</string>
+    <string name="day_sunday">Pazar</string>
+    <string name="day_monday">Pazartesi günü</string>
+    <string name="day_tuesday">Salı</string>
+    <string name="day_wednesday">Çarşamba günü</string>
+    <string name="day_thursday">Perşembe günü</string>
+    <string name="day_friday">Cuma</string>
+    <string name="language">Language</string>
 </resources>
