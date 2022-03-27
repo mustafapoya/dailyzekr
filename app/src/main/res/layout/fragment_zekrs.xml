@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="#fff"
-    android:layoutDirection="rtl"
     android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,7 +22,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/iran_sans_bold"
-            android:text="ذکر امروز"
+            android:text="@string/today_zekr"
             android:textColor="#EAE8E8"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -31,27 +30,30 @@
 
         <TextView
             android:id="@+id/txtZekrText"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
             android:fontFamily="@font/iran_sans_bold"
             android:text="یا رَبِّ الْعالَمِین"
+            android:textAlignment="center"
             android:textColor="#fff"
             android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtTitleTodayZekr" />
 
         <TextView
             android:id="@+id/txtZekrTrans"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
             android:fontFamily="@font/iran_sans_family"
             android:text="ای مهربان ترین مهربانان"
             android:textColor="#EAE8E8"
             android:textSize="14sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtZekrText" />
 
@@ -62,24 +64,12 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:fontFamily="@font/iran_sans_bold"
-            android:text="سه شنبه"
+            android:text="@string/today_name"
             android:textColor="#EAE8E8"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/txtTodayDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:layout_marginEnd="10dp"
-            android:text="1399/11/15"
-            android:textColor="#fff"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtTodayName" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.gms.ads.AdView
