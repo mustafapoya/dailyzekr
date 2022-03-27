@@ -2,31 +2,52 @@
   "zekrs": [
     {
       "zekr": "یا رَبِّ الْعالَمِین",
-      "trans": "ای پروردگار جهانیان"
+      "trans": "ای پروردگار جهانیان",
+      "trans_en": "O' Lord of the worlds",
+      "trans_hi": "हे जगत् के स्वामी",
+      "trans_tr": "Ey âlemlerin Rabbi"
     },
     {
       "zekr": "یا ذَالجَلالِ وَ اْلاِکْرام",
-      "trans": "ای صاحب شکوه و بزرگواری"
+      "trans": "ای صاحب شکوه و بزرگواری",
+      "trans_en":  "O' glory and honor",
+      "trans_hi":  "हे महिमा और सम्मान",
+      "trans_tr":  "Ey şan ve şeref"
     },
     {
       "zekr": "یا قاضیَ الحاجات",
-      "trans": "ای برآورنده حاجت ها"
+      "trans": "ای برآورنده حاجت ها",
+      "trans_en":  "O' judge of needs",
+      "trans_hi":  "ओह जज ऑफ जर्नी",
+      "trans_tr":  "Ey ihtiyaçların yargıcı"
     },
     {
       "zekr": "یا أَرْحَمَ الرَّاحِمِین",
-      "trans": "ای بخشنده ترین بخشندگان"
+      "trans": "ای بخشنده ترین بخشندگان",
+      "trans_en":  "O' Most Merciful of the Most Merciful",
+      "trans_hi":  "हे परम दयालु के परम दयालु",
+      "trans_tr":  "Ey Merhametlilerin En Merhametlisi"
     },
     {
       "zekr": "یا حَیُّ یا قَیّومُ",
-      "trans": "ای زنده، ای پاینده"
+      "trans": "ای زنده، ای پاینده",
+      "trans_en":  "O' live, O Qayyum!",
+      "trans_hi":  "ऐ ज़िंदा, ऐ कय्यूम!",
+      "trans_tr":  "Ey yaşa ey Kayyum!"
     },
     {
       "zekr": "لا إِلهَ إِلَّا اللَّهُ المَلِک الحقّ المُبین",
-      "trans": "معبودی جز خدا نیست؛ پادشاه برحق آشکار"
+      "trans": "معبودی جز خدا نیست؛ پادشاه برحق آشکار",
+      "trans_en":  "There is no god but God, the King, the manifest truth",
+      "trans_hi":  "भगवान, राजा, प्रकट सत्य के अलावा कोई भगवान नहीं है",
+      "trans_tr":  "Tanrı'dan başka tanrı yoktur, Kral, apaçık gerçek"
     },
     {
       "zekr": "ٱللَّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِ مُحَمَّدٍ",
-      "trans":  "خدایا درود بفرست بر محمد و آل محمد"
+      "trans":  "خدایا درود بفرست بر محمد و آل محمد",
+      "trans_en":  "God bless Muhammad and the family of Muhammad",
+      "trans_hi":  "भगवान मुहम्मद और मुहम्मद के परिवार को आशीर्वाद दें",
+      "trans_tr":  "Allah Muhammed'i ve Muhammed'in ailesini korusun"
     },
     {
       "zekr":"یا الله",
@@ -34,55 +55,94 @@
     },
     {
       "zekr": "تسبیحات حضرت زهرا",
-      "trans":  "اَللَّهُ أَکْبَرُ، الحمدُ للّه، سُبْحانَ اللَّهِ"
+      "trans":  "اَللَّهُ أَکْبَرُ، الحمدُ للّه، سُبْحانَ اللَّهِ",
+      "trans_en":  "Praises of Hazrat Zahra",
+      "trans_hi":  "हज़रत ज़हरा की स्तुति",
+      "trans_tr":  "Hazreti Zehra'nın Övgüleri"
     },
     {
       "zekr": "تسبیحات اربعه",
-      "trans":  "سُبْحانَ اللهِ، وَ الْحَمْدُ لِلهِ، وَ لا إلهَ إلاّ اللهُ، وَ اللهُ أکْبَرُ"
+      "trans":  "سُبْحانَ اللهِ، وَ الْحَمْدُ لِلهِ، وَ لا إلهَ إلاّ اللهُ، وَ اللهُ أکْبَرُ",
+      "trans_en":  "Four praises",
+      "trans_hi":  "चार स्तुति",
+      "trans_tr":  "dört övgü"
     },
     {
       "zekr": "ذکر یونسیه",
-      "trans":  "لَّا إِلَهَ إِلَّا أَنتَ سُبْحَانَک إِنِّی کنتُ مِنَ الظَّالِمِینَ"
+      "trans":  "لَّا إِلَهَ إِلَّا أَنتَ سُبْحَانَک إِنِّی کنتُ مِنَ الظَّالِمِینَ",
+      "trans_en":  "male unicorn",
+      "trans_hi":  "नर गेंडा",
+      "trans_tr":  "erkek tek boynuzlu at"
     },
     {
       "zekr": "اَللَّهُ أَکْبَر",
-      "trans":  "خدا بزرگ است"
+      "trans":  "خدا بزرگ است",
+      "trans_en":  "Allah is the greatest",
+      "trans_hi":  "अल्लाह महानतम है",
+      "trans_tr":  "Allah en yücedir"
     },
     {
       "zekr": "الحمدُ للّه",
-      "trans":  "حمد و سپاس مخصوص خداست"
+      "trans":  "حمد و سپاس مخصوص خداست",
+      "trans_en":  "Thank God",
+      "trans_hi":  "सुकर है",
+      "trans_tr":  "Allah'a şükür"
     },
     {
       "zekr": "سُبْحانَ اللَّه",
-      "trans":  "منزه است خداوند"
+      "trans":  "منزه است خداوند",
+      "trans_en":  "Glory be to Allah",
+      "trans_hi":  "सुभान अल्लाह",
+      "trans_tr":  "Allah'a hamd olsun"
     },
     {
       "zekr": "لا إلهَ إلاّ الله",
-      "trans":  "نیست معبودی جز خدا"
+      "trans":  "نیست معبودی جز خدا",
+      "trans_en":  "No God except Allah",
+      "trans_hi":  "अल्लाह के सिवा कोई खुदा नहीं",
+      "trans_tr":  "Allah'tan başka ilah yoktur"
     },
     {
       "zekr": "لَا حَوْلَ وَ لَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِیِّ الْعَظِیمِ",
-      "trans":  "هیچ نیرو و توانى جز از سوى خداوند بلندمرتبه و بزرگ نیست"
+      "trans":  "هیچ نیرو و توانى جز از سوى خداوند بلندمرتبه و بزرگ نیست",
+      "trans_en":  "There is neither might nor power except with God, the Exalted, the Great",
+      "trans_hi":  "ईश्वर, महान, महान के अलावा न तो शक्ति है और न ही शक्ति",
+      "trans_tr":  "Yüce ve Büyük Allah'tan başka güç ve kuvvet yoktur."
     },
     {
       "zekr": "یا فَتَّاح",
-      "trans": "ای باز کننده همه درها و حلال مشکلات"
+      "trans": "ای باز کننده همه درها و حلال مشکلات",
+      "trans_en":  "O' Fattah",
+      "trans_hi":  "ओ फत्ताही",
+      "trans_tr":  "ey fettah"
     },
     {
       "zekr": "یا سَتّارُ العُیُوب غَفّارُ الذُّنُوب",
-      "trans": "ای پوشاننده عیب ها و ای آمرزنده گناهان"
+      "trans": "ای پوشاننده عیب ها و ای آمرزنده گناهان",
+      "trans_en":  "O' Curtain of faults, the Forgiver of sins",
+      "trans_hi":  "हे दोषों का पर्दा, पापों का क्षमा करने वाला",
+      "trans_tr":  "Ey kusurların perdesi, günahları bağışlayan"
     },
     {
       "zekr": "يا عَلِىُّ يا عَظيمُ يا غَفُورُ يا رَحيمُ",
-      "trans": "ای والا، ای بزرگ، ای آمزنده، ای مهربان"
+      "trans": "ای والا، ای بزرگ، ای آمزنده، ای مهربان",
+      "trans_en":  "O' Ali, O Great, O Forgiving, O Merciful",
+      "trans_hi":  "हे अली, हे महान, हे क्षमाशील, हे दयालु",
+      "trans_tr":  "Ey Ali, Ey Büyük, Ey Bağışlayan, Ey Merhametli"
     },
     {
       "zekr": "بِسْمِ اللّهِ وَلا حَوْلَ ولا قُوَّةَ إِلّا بِاللّهِ تَوَکَّلْتُ عَلَی اللّهِ",
-      "trans": "به نام خداوند هیچ قدرت و قوتی نیست مگر با کمک خداوند ، واگذار می کنم کارهایم را بر خدا"
+      "trans": "به نام خداوند هیچ قدرت و قوتی نیست مگر با کمک خداوند ، واگذار می کنم کارهایم را بر خدا",
+      "trans_en":  "In the name of God, and there is no might or power except in God, I put my trust in God",
+      "trans_hi":  "ईश्वर के नाम पर, और ईश्वर के अलावा कोई शक्ति या शक्ति नहीं है, मैंने ईश्वर पर अपना भरोसा रखा है",
+      "trans_tr":  "Allah'ın adıyla ve Allah'tan başka hiçbir güç ve kuvvet yoktur, ben Allah'a tevekkül ettim."
     },
     {
       "zekr": "أَلَا بِذِکْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ",
-      "trans": "آگاه باش كه با ياد خدا دلها آرامش مى يابد"
+      "trans": "آگاه باش كه با ياد خدا دلها آرامش مى يابد",
+      "trans_en":  "Is it not in the remembrance of God that hearts find rest",
+      "trans_hi":  "क्या ईश्वर की याद में दिलों को आराम नहीं मिलता",
+      "trans_tr":  "Kalpler Allah'ın zikriyle huzur bulmaz mı?"
     }
   ]
 }
