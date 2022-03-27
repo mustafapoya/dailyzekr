@@ -8,7 +8,8 @@
         <entry key="..\:/work/system/daily_zekr/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/work/system/daily_zekr/app/src/main/res/layout/fragment_setting.xml" value="0.25" />
         <entry key="..\:/work/system/daily_zekr/app/src/main/res/layout/fragment_zekr_counter.xml" value="0.22" />
-        <entry key="..\:/work/system/daily_zekr/app/src/main/res/layout/fragment_zekrs.xml" value="0.33" />
+        <entry key="..\:/work/system/daily_zekr/app/src/main/res/layout/fragment_zekrs.xml" value="0.5" />
+        <entry key="..\:/work/system/daily_zekr/app/src/main/res/layout/list_custom_zekr.xml" value="0.33" />
       </map>
     </option>
   </component>
