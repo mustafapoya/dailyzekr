@@ -31,7 +31,7 @@ public class ZekrsManager {
         try {
             JSONObject jsonObject = data.getJSONObject(getRandomNumber());
             zekr.setZekr(jsonObject.getString("author"));
-            zekr.setTrans(jsonObject.getString("quote"));
+            zekr.setTransFarsi(jsonObject.getString("quote"));
 
 
             Log.d(TAG, "getRandomZekr: " + zekr.toString());
@@ -51,7 +51,10 @@ public class ZekrsManager {
                 JSONObject jsonObject = data.getJSONObject(i);
                 Zekr zekr = new Zekr();
                 zekr.setZekr(jsonObject.getString("zekr"));
-                zekr.setTrans(jsonObject.getString("trans"));
+                zekr.setTransFarsi(jsonObject.getString("trans"));
+                zekr.setTransEnglish(jsonObject.getString("trans_en"));
+                zekr.setTransHindi(jsonObject.getString("trans_hi"));
+                zekr.setTransTurkey(jsonObject.getString("trans_tr"));
                 zekrs.add(zekr);
             }
         } catch (JSONException e) {
