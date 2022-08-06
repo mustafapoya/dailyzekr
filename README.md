@@ -25,7 +25,7 @@ Dailyzekr works across all Phone devices.
 
 If you are looking for more Android app, checkout out [MustafaPoya](https://github.com/mustafapoya).
 
-# Phones
+# Screenshots
 
 <p float="left">
   <img src="https://play-lh.googleusercontent.com/yc_ZBPsl-x1FUlEyvPe2FFquSzlaohrQaWSprjYd5JwzJh2ZAF_V-awTLcpcWeP18Ukr=w2560-h1440-rw" width="170" />
