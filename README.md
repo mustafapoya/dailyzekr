@@ -1,18 +1,25 @@
 [![Build Status](https://app.travis-ci.com/mustafapoya/dailyzekr.svg?branch=master)](https://app.travis-ci.com/mustafapoya/dailyzekr)
 
 # Dailyzekr
-Fully featured faily zekr app that works all from factors and uses latest tools
+An Android application use to change HomeScreen and LockScreen Images each day and display quote to users.
 
 <a href='https://play.google.com/store/apps/details?id=com.ellia.dailyzekr'>
 <img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' height=90px/>
 </a>
 
 * * *
-Dailyzekr is built with latest development tools and design patterns.
-- Written in Java
-- Show each day zekr on Home and Lock screen.
-- Notify you the hadith of the day.
-- Count your zekrs
+There are specifics prays for seven day of a week in Islam, and many Muslims seek to use them as their phone wallpaper, 
+however, changing the wallpaper every single day is an ambiguous task. 
+Through the Daily Zekr app, this ambiguous would be vanish since it changes and apply the phone wallpaper accordingly.
+- Change the Phone’s Home Screen Background automatically.
+- Gain control of the background changing service.
+- Setting for handling notification, background image change service
+- Set image manually.
+- Count Number of Zekrs (prays) said by user
+- Show Islamic quote on every day
+- Support English, Persian, Hindi, Turkish
+- Display list of Islamic quotes
+- List of Zekrs and count pray.
 
 Dailyzekr works across all Phone devices.
 
