@@ -20,7 +20,7 @@
         android:adjustViewBounds="true"
         android:contentDescription="@string/nav_header_desc"
         android:paddingLeft="-5dp"
-        android:src="@drawable/ellia_logo" />
+        android:src="@drawable/app_logo" />
 
     <TextView
         android:layout_width="match_parent"

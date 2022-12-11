@@ -65,7 +65,7 @@ public class MyAlarmService extends BroadcastReceiver {
         }
 
         mBuilder = new NotificationCompat.Builder(mContext,NOTIFICATION_CHANNEL_ID);
-        mBuilder.setSmallIcon(R.drawable.ellia_logo);
+        mBuilder.setSmallIcon(R.drawable.app_logo);
         mBuilder.setContentTitle(quotes.getAuthor())
                 .setContentText(quoteText)
                 .setAutoCancel(false)
@@ -84,7 +84,7 @@ public class MyAlarmService extends BroadcastReceiver {
 
             assert mNotificationManager != null;
             mBuilder.setChannelId(NOTIFICATION_CHANNEL_ID);
-            mBuilder.setSmallIcon(R.drawable.ellia_logo);
+            mBuilder.setSmallIcon(R.drawable.app_logo);
             mBuilder.setContentTitle(quotes.getAuthor());
             mBuilder.setContentText(quoteText);
             mBuilder.setStyle(new NotificationCompat.BigTextStyle().bigText(quoteText));
