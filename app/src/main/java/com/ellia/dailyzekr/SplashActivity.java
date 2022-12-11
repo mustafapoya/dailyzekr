@@ -23,7 +23,7 @@ public class SplashActivity extends AppCompatActivity {
 
                 while(waitTime <= 3 && isActive) {
                     try{
-                        sleep(1000);
+                        sleep(700);
                     }catch (InterruptedException e) {
                         e.printStackTrace();
                     }

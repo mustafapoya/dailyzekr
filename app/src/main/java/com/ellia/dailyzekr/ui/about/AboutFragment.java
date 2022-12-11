@@ -40,9 +40,10 @@ public class AboutFragment extends Fragment {
                 .setDescription(getString(R.string.about_page_description))
                 .addItem(new Element().setTitle("Version 1.0").setIconDrawable(R.drawable.ic_menu_setting))
                 .addGroup("Connect With US")
-                .addEmail("elliasoft10@gmail.com")
-                .addFacebook("ellia.brothers.3")
-                .addYoutube("UCzsLPS-vuKJ9ihmKjIoh9xg")
+                .addEmail("contact@golbarg.net")
+                .addWebsite("golbarg.net")
+                .addFacebook("golbargnet")
+                .addYoutube("UC9iN64rFs3noyEICk-3wbbw")
                 .addPlayStore("com.ellia.dailyzekr")
                 .addItem(getCopyRightsElement())
                 .create();
