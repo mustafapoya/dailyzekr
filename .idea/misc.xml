@@ -3,6 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/mine/work/dailyzekr/app/src/main/res/layout/activity_main.xml" value="0.23385416666666667" />
+        <entry key="..\:/mine/work/dailyzekr/app/src/main/res/layout/activity_splash.xml" value="0.2" />
+        <entry key="..\:/mine/work/dailyzekr/app/src/main/res/layout/activity_zekr_counter.xml" value="0.23385416666666667" />
+        <entry key="..\:/mine/work/dailyzekr/app/src/main/res/layout/app_bar_main.xml" value="0.23385416666666667" />
+        <entry key="..\:/mine/work/dailyzekr/app/src/main/res/layout/content_main.xml" value="0.23385416666666667" />
+        <entry key="..\:/mine/work/dailyzekr/app/src/main/res/layout/fragment_about.xml" value="0.23385416666666667" />
+        <entry key="..\:/mine/work/dailyzekr/app/src/main/res/layout/fragment_home.xml" value="0.23385416666666667" />
+        <entry key="..\:/mine/work/dailyzekr/app/src/main/res/layout/fragment_quote.xml" value="0.23385416666666667" />
+        <entry key="..\:/mine/work/dailyzekr/app/src/main/res/layout/fragment_setting.xml" value="0.23385416666666667" />
+        <entry key="..\:/mine/work/dailyzekr/app/src/main/res/layout/fragment_zekr_counter.xml" value="0.21979166666666666" />
+        <entry key="..\:/mine/work/dailyzekr/app/src/main/res/layout/fragment_zekrs.xml" value="0.21979166666666666" />
+        <entry key="..\:/mine/work/dailyzekr/app/src/main/res/layout/list_custom_quote.xml" value="0.23385416666666667" />
+        <entry key="..\:/mine/work/dailyzekr/app/src/main/res/layout/list_custom_zekr.xml" value="0.23385416666666667" />
+        <entry key="..\:/mine/work/dailyzekr/app/src/main/res/layout/nav_header_main.xml" value="0.33" />
         <entry key="..\:/work/system/daily_zekr/app/src/main/res/drawable-en/week_days.xml" value="0.2485" />
         <entry key="..\:/work/system/daily_zekr/app/src/main/res/layout/activity_zekr_counter.xml" value="0.33" />
         <entry key="..\:/work/system/daily_zekr/app/src/main/res/layout/fragment_home.xml" value="0.2" />
@@ -13,7 +27,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

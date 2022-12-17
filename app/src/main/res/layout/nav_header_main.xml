@@ -19,7 +19,7 @@
         android:layout_height="60dp"
         android:adjustViewBounds="true"
         android:contentDescription="@string/nav_header_desc"
-        android:paddingLeft="-5dp"
+        android:paddingLeft="0dp"
         android:src="@drawable/app_logo" />
 
     <TextView
