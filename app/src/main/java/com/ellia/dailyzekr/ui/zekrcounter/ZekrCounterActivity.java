@@ -19,12 +19,16 @@ import com.ellia.dailyzekr.models.Zekr;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -89,13 +93,6 @@ public class ZekrCounterActivity extends AppCompatActivity {
             }
         });
 
-        mInterstitialAd = new InterstitialAd(context);
-        /*
-        correct id: ca-app-pub-3540008829614888/9797063739
-        Test    id: ca-app-pub-3940256099942544/1033173712
-        */
-        mInterstitialAd.setAdUnitId("ca-app-pub-3540008829614888/9797063739");
-
         btnCount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -109,16 +106,33 @@ public class ZekrCounterActivity extends AppCompatActivity {
         btnReset.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                mInterstitialAd.loadAd(new AdRequest.Builder().build());
                 if(DailyZekrHandler.isNetworkAvailable(context)) {
-                    if(mInterstitialAd.isLoaded()) {
-                        mInterstitialAd.show();
-                        mInterstitialAd.setAdListener(new AdListener(){
+                    AdRequest adRequest = new AdRequest.Builder().build();
+                    /*
+                    correct id: ca-app-pub-3540008829614888/9797063739
+                    Test    id: ca-app-pub-3940256099942544/1033173712
+                    */
+                    InterstitialAd.load(context,"ca-app-pub-3540008829614888/9797063739", adRequest,
+                            new InterstitialAdLoadCallback() {
+                                @Override
+                                public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                                    mInterstitialAd = interstitialAd;
+                                }
+
+                                @Override
+                                public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                                    mInterstitialAd = null;
+                                }
+                            });
+
+                    if(mInterstitialAd != null) {
+                        mInterstitialAd.show(getParent());
+                        mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback() {
                             @Override
-                            public void onAdClosed() {
+                            public void onAdDismissedFullScreenContent() {
+                                super.onAdDismissedFullScreenContent();
                                 alertDialogBuilder.show();
                             }
-
                         });
                     } else {
                         alertDialogBuilder.show();

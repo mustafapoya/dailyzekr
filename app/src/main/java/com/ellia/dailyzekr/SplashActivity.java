@@ -21,9 +21,9 @@ public class SplashActivity extends AppCompatActivity {
             public void run() {
                 int waitTime = 0;
 
-                while(waitTime <= 3 && isActive) {
+                while(waitTime <= 5 && isActive) {
                     try{
-                        sleep(700);
+                        sleep(600);
                     }catch (InterruptedException e) {
                         e.printStackTrace();
                     }

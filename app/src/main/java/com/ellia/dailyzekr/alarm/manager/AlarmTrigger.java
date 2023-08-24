@@ -29,7 +29,12 @@ public class AlarmTrigger {
         Log.d("VersionOFTHE", "onCreate: The android version is greater than O");
         alarMgr = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
         Intent intent = new Intent(context, MyAlarmService.class);
-        alarmIntent = PendingIntent.getBroadcast(context, 0, intent, 0);
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
+            alarmIntent = PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_IMMUTABLE);
+        } else {
+            alarmIntent = PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_ONE_SHOT | PendingIntent.FLAG_IMMUTABLE);
+        }
+
 
         calendar = Calendar.getInstance();
         calendar.set(Calendar.HOUR, 00);
