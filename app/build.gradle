@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 33
     defaultConfig {
         applicationId "com.ellia.dailyzekr"
         minSdkVersion 19
-        targetSdkVersion 31
-        versionCode 7
-        versionName "0.3.7"
+        targetSdkVersion 33
+        versionCode 8
+        versionName "0.3.8"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         setProperty("archivesBaseName", "daily-zekr-$versionName")
     }
