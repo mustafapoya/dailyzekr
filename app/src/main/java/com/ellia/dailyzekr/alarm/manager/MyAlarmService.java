@@ -19,7 +19,7 @@ import com.ellia.dailyzekr.models.Quote;
 
 import androidx.core.app.NotificationCompat;
 
-public class MyAlarmService extends BroadcastReceiver {
+public class  MyAlarmService extends BroadcastReceiver {
 
     private NotificationManager mNotificationManager;
     private NotificationCompat.Builder mBuilder;
